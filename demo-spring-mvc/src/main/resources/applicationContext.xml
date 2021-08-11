@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/aop
+    http://www.springframework.org/schema/aop/spring-aop.xsd
+    http://www.springframework.org/schema/tx
+    http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <import resource="spring-db.xml"/>
+    <import resource="spring-single-redis.xml"/>
+    <import resource="spring-pkgenerate-redis.xml"/>
+    <import resource="spring-standalone-redis.xml"/>
+    <aop:config>
+        <aop:pointcut id="service" expression="execution(* com.datasource..*.service.*.*(..))"/>
+        <!-- 关键配置，切换数据源一定要比持久层代码更先执行（事务也算持久层代码） -->
+        <aop:advisor advice-ref="dataSourceExchange" pointcut-ref="service" order="1"/>
+    </aop:config>
+</beans>

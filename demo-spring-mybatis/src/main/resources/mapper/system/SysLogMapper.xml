@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC
+    "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="com.jx.nc.system.mapper.SysLogMapper">
+	<resultMap id="sysLog" type="com.jx.nc.system.bean.SysLog">
+        <id property="logId"      column="log_id"      javaType="String" />
+		<result property="logInfo"    column="log_info"    javaType="String" />
+		<result property="createTime" column="create_time" javaType="java.time.LocalDateTime" />
+	</resultMap>
+    <sql id="Base_Column_List">
+        sysLog.log_id,
+        sysLog.log_info,
+        sysLog.create_time
+    </sql>
+    <select id="selectById" parameterType="java.io.Serializable" resultMap="sysLog">
+        select
+        <include refid="Base_Column_List" />
+        from
+            sys_log sysLog
+        where
+            sysLog.log_id = #{logId}
+    </select>
+
+    <insert id="insert" parameterType="com.jx.nc.system.bean.SysLog">
+        insert into sys_log (
+        <trim suffixOverrides=",">
+            <if test="logId != null and logId != ''">log_id,</if>
+            <if test="logInfo != null and logInfo != ''">log_info,</if>
+            <if test="createTime != null">create_time,</if>
+        </trim>
+        ) values (
+        <trim suffixOverrides=",">
+            <if test="logId != null and logId != ''">#{logId},</if>
+            <if test="logInfo != null and logInfo != ''">#{logInfo},</if>
+            <if test="createTime != null">#{createTime},</if>
+        </trim>
+        )
+    </insert>
+
+    <insert id="saveOrUpdate" parameterType="com.jx.nc.system.bean.SysLog">
+        replace into sys_log (
+        <trim suffixOverrides=",">
+            <if test="logId != null and logId != ''">log_id,</if>
+            <if test="logInfo != null and logInfo != ''">log_info,</if>
+            <if test="createTime != null">create_time,</if>
+        </trim>
+        ) values (
+        <trim suffixOverrides=",">
+            <if test="logId != null and logId != ''">#{logId},</if>
+            <if test="logInfo != null and logInfo != ''">#{logInfo},</if>
+            <if test="createTime != null">#{createTime},</if>
+        </trim>
+        )
+    </insert>
+
+    <update id="updateById" parameterType="com.jx.nc.system.bean.SysLog">
+        update sys_log
+        <set>
+            <trim suffixOverrides=",">
+	        <if test="logId != null and logId != ''">log_id=#{logId},</if>
+	        <if test="logInfo != null and logInfo != ''">log_info=#{logInfo},</if>
+	        <if test="createTime != null">create_time=#{createTime},</if>
+            </trim>
+        </set>
+        where log_id = #{logId}
+    </update>
+
+    <delete id="deleteById" parameterType="java.io.Serializable">
+        delete from sys_log where log_id = #{logId}
+    </delete>
+
+    <delete id="deleteByMap" parameterType="Map">
+        <if test="_parameter != null">
+            delete from sys_log
+            <trim prefix="where" prefixOverrides="and|or">
+                <if test="logId != null and logId != ''">and log_id=#{logId} </if>
+                <if test="logInfo != null and logInfo != ''">and log_info=#{logInfo} </if>
+                <if test="createTime != null">and create_time=#{createTime} </if>
+            </trim>
+        </if>
+    </delete>
+
+    <select id="selectByMap" parameterType="Map" resultMap="sysLog">
+        select
+        <include refid="Base_Column_List" />
+        from
+            sys_log sysLog
+        <if test="_parameter != null">
+            <include refid="Where_Clause"/>
+        </if>
+    </select>
+
+    <sql id="Where_Clause">
+    <trim prefix="where" prefixOverrides="and|or">
+		<if test="logId != null and logId != ''">and sysLog.log_id=#{logId} </if>
+		<if test="logInfo != null and logInfo != ''">and sysLog.log_info=#{logInfo} </if>
+		<if test="createTime != null">and sysLog.create_time=#{createTime} </if>
+    </trim>
+    </sql>
+    
+</mapper>
