@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="demo-spring-mvc:war exploded" />
+    </artifacts-to-build>
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -17,15 +22,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7fc8a8e-e4e7-4f09-86d4-fce274d4c7e5" name="Default Changelist" comment="加入spring-data-redis相关依赖">
-      <change afterPath="$PROJECT_DIR$/demo-spring-data/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-spring-data/src/main/resources/config/redis.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-spring-data/src/main/resources/spring-single-redis.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo-spring-mvc/src/main/java/com/jx/nc/filter/ControllerExceptionResolver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo-spring-mvc/src/test/java/com/jx/nc/DemoSysLog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo-spring-mybatis/src/main/java/com/jx/nc/system/impl/SysLogServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo-spring-mybatis/src/main/resources/spring-db-con.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-spring-data/src/test/java/com/jx/nc/TestIdGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-data/src/test/java/com/jx/nc/TestIdGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-spring-mvc/src/main/java/com/jx/nc/system/controller/SysLogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mvc/src/main/java/com/jx/nc/system/controller/SysLogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-spring-mvc/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mvc/src/main/resources/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-spring-mvc/src/main/resources/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mvc/src/main/resources/spring-mvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-spring-mybatis/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mybatis/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-spring-mybatis/src/main/java/com/jx/nc/datasource/DynamicDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mybatis/src/main/java/com/jx/nc/datasource/DynamicDataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-spring-mybatis/src/main/java/com/jx/nc/datasource/DynamicDataSourceContextHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mybatis/src/main/java/com/jx/nc/datasource/DynamicDataSourceContextHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-spring-mybatis/src/main/java/com/jx/nc/datasource/aop/DataSourceAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mybatis/src/main/java/com/jx/nc/datasource/aop/DataSourceAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-spring-mybatis/src/main/java/com/jx/nc/system/service/SysLogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mybatis/src/main/java/com/jx/nc/system/service/SysLogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-spring-mybatis/src/main/resources/spring-db.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mybatis/src/main/resources/spring-db.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-spring-mybatis/src/test/java/com/jx/nc/TestSysLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mybatis/src/test/java/com/jx/nc/TestSysLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -44,6 +75,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="MavenRunner">
+    <option name="vmOptions" value="-Dfile.encoding=UTF-8" />
+  </component>
   <component name="ProjectId" id="1wIViU9qjtKgkxdIrZq8LOY9viU" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -53,10 +87,171 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../driver_phyexam_plus" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.jx.nc" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.demospring">
+    <configuration name="DemoSysLog" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo-spring-mvc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jx.nc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jx.nc" />
+      <option name="MAIN_CLASS_NAME" value="com.jx.nc.DemoSysLog" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoSysLog.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo-spring-mvc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jx.nc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jx.nc" />
+      <option name="MAIN_CLASS_NAME" value="com.jx.nc.DemoSysLog" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestSysLog" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo-spring-mybatis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jx.nc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jx.nc" />
+      <option name="MAIN_CLASS_NAME" value="com.jx.nc.TestSysLog" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestSysLog.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo-spring-mybatis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jx.nc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jx.nc" />
+      <option name="MAIN_CLASS_NAME" value="com.jx.nc.TestSysLog" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="demospring" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.51" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="COMMON_VM_ARGUMENTS" value="-Dfile.encoding=UTF-8" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <deployment>
+        <artifact name="demo-spring-mvc:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/demo" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_springframe-use_2" />
+        <option name="HTTP_PORT" value="8099" />
+        <option name="JNDI_PORT" value="10992" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="62321" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="demo-spring-mvc:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Tomcat Server.demospring" />
+      <item itemvalue="JUnit.TestSysLog.test1" />
+      <item itemvalue="JUnit.DemoSysLog.test1" />
+      <item itemvalue="JUnit.DemoSysLog" />
+      <item itemvalue="JUnit.TestSysLog" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TestSysLog" />
+        <item itemvalue="JUnit.DemoSysLog" />
+        <item itemvalue="JUnit.DemoSysLog.test1" />
+        <item itemvalue="JUnit.TestSysLog.test1" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration>C:\Users\ZYXC\AppData\Roaming\Subversion</configuration>
@@ -69,7 +264,16 @@
       <option name="presentableId" value="Default" />
       <updated>1628146216303</updated>
       <workItem from="1628146226808" duration="1198000" />
+      <workItem from="1628728756099" duration="19619000" />
     </task>
+    <task id="LOCAL-00001" summary="spring框架使用redis、mybatis等">
+      <created>1628676165266</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1628676165266</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -80,86 +284,118 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="spring框架使用redis、mybatis等" />
+    <option name="LAST_COMMIT_MESSAGE" value="spring框架使用redis、mybatis等" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="1060" y="440" key="FileChooserDialogImpl" timestamp="1628150823026">
+    <state x="734" y="354" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1628730592471">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1060" y="440" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1628150823026" />
-    <state width="2076" height="404" key="GridCell.Tab.0.bottom" timestamp="1628676084787">
+    <state x="734" y="354" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1628730592471" />
+    <state x="1001" y="500" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1628750235757">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2076" height="404" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1628676084787" />
-    <state width="2076" height="404" key="GridCell.Tab.0.center" timestamp="1628676084787">
+    <state x="1001" y="500" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1628750235757" />
+    <state x="1085" y="405" key="#com.intellij.ide.util.MemberChooser" timestamp="1628754894983">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2076" height="404" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1628676084787" />
-    <state width="2076" height="404" key="GridCell.Tab.0.left" timestamp="1628676084786">
+    <state x="1085" y="405" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1628754894983" />
+    <state x="1060" y="440" key="FileChooserDialogImpl" timestamp="1628751863369">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2076" height="404" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1628676084786" />
-    <state width="2076" height="404" key="GridCell.Tab.0.right" timestamp="1628676084787">
+    <state x="1060" y="440" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1628751863369" />
+    <state width="2182" height="301" key="GridCell.Tab.0.bottom" timestamp="1628755745018">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2076" height="404" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1628676084787" />
-    <state width="2076" height="404" key="GridCell.Tab.1.bottom" timestamp="1628676084787">
+    <state width="2182" height="301" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1628755745018" />
+    <state width="2182" height="301" key="GridCell.Tab.0.center" timestamp="1628755745018">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2076" height="404" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1628676084787" />
-    <state width="2076" height="404" key="GridCell.Tab.1.center" timestamp="1628676084787">
+    <state width="2182" height="301" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1628755745018" />
+    <state width="2182" height="301" key="GridCell.Tab.0.left" timestamp="1628755745018">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2076" height="404" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1628676084787" />
-    <state width="2076" height="404" key="GridCell.Tab.1.left" timestamp="1628676084787">
+    <state width="2182" height="301" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1628755745018" />
+    <state width="2182" height="301" key="GridCell.Tab.0.right" timestamp="1628755745018">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2076" height="404" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1628676084787" />
-    <state width="2076" height="404" key="GridCell.Tab.1.right" timestamp="1628676084787">
+    <state width="2182" height="301" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1628755745018" />
+    <state width="2182" height="301" key="GridCell.Tab.1.bottom" timestamp="1628755745018">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2076" height="404" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1628676084787" />
-    <state width="2076" height="404" key="GridCell.Tab.2.bottom" timestamp="1628676084788">
+    <state width="2182" height="301" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1628755745018" />
+    <state width="2182" height="301" key="GridCell.Tab.1.center" timestamp="1628755745018">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2076" height="404" key="GridCell.Tab.2.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1628676084788" />
-    <state width="2076" height="404" key="GridCell.Tab.2.center" timestamp="1628676084787">
+    <state width="2182" height="301" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1628755745018" />
+    <state width="2182" height="301" key="GridCell.Tab.1.left" timestamp="1628755745018">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2076" height="404" key="GridCell.Tab.2.center/0.0.2560.1400@0.0.2560.1400" timestamp="1628676084787" />
-    <state width="2076" height="404" key="GridCell.Tab.2.left" timestamp="1628676084787">
+    <state width="2182" height="301" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1628755745018" />
+    <state width="2182" height="301" key="GridCell.Tab.1.right" timestamp="1628755745018">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2076" height="404" key="GridCell.Tab.2.left/0.0.2560.1400@0.0.2560.1400" timestamp="1628676084787" />
-    <state width="2076" height="404" key="GridCell.Tab.2.right" timestamp="1628676084787">
+    <state width="2182" height="301" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1628755745018" />
+    <state width="2182" height="301" key="GridCell.Tab.2.bottom" timestamp="1628755744817">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2076" height="404" key="GridCell.Tab.2.right/0.0.2560.1400@0.0.2560.1400" timestamp="1628676084787" />
-    <state width="2076" height="404" key="GridCell.Tab.3.bottom" timestamp="1628676084788">
+    <state width="2182" height="301" key="GridCell.Tab.2.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1628755744817" />
+    <state width="2182" height="301" key="GridCell.Tab.2.center" timestamp="1628755744817">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2076" height="404" key="GridCell.Tab.3.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1628676084788" />
-    <state width="2076" height="404" key="GridCell.Tab.3.center" timestamp="1628676084788">
+    <state width="2182" height="301" key="GridCell.Tab.2.center/0.0.2560.1400@0.0.2560.1400" timestamp="1628755744817" />
+    <state width="2182" height="301" key="GridCell.Tab.2.left" timestamp="1628755744817">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2076" height="404" key="GridCell.Tab.3.center/0.0.2560.1400@0.0.2560.1400" timestamp="1628676084788" />
-    <state width="2076" height="404" key="GridCell.Tab.3.left" timestamp="1628676084788">
+    <state width="2182" height="301" key="GridCell.Tab.2.left/0.0.2560.1400@0.0.2560.1400" timestamp="1628755744817" />
+    <state width="2182" height="301" key="GridCell.Tab.2.right" timestamp="1628755744817">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2076" height="404" key="GridCell.Tab.3.left/0.0.2560.1400@0.0.2560.1400" timestamp="1628676084788" />
-    <state width="2076" height="404" key="GridCell.Tab.3.right" timestamp="1628676084788">
+    <state width="2182" height="301" key="GridCell.Tab.2.right/0.0.2560.1400@0.0.2560.1400" timestamp="1628755744817" />
+    <state width="2182" height="301" key="GridCell.Tab.3.bottom" timestamp="1628755744817">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2076" height="404" key="GridCell.Tab.3.right/0.0.2560.1400@0.0.2560.1400" timestamp="1628676084788" />
-    <state x="872" y="432" key="Vcs.Push.Dialog.v2" timestamp="1628676090237">
+    <state width="2182" height="301" key="GridCell.Tab.3.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1628755744817" />
+    <state width="2182" height="301" key="GridCell.Tab.3.center" timestamp="1628755744817">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="872" y="432" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1628676090237" />
+    <state width="2182" height="301" key="GridCell.Tab.3.center/0.0.2560.1400@0.0.2560.1400" timestamp="1628755744817" />
+    <state width="2182" height="301" key="GridCell.Tab.3.left" timestamp="1628755744817">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2182" height="301" key="GridCell.Tab.3.left/0.0.2560.1400@0.0.2560.1400" timestamp="1628755744817" />
+    <state width="2182" height="301" key="GridCell.Tab.3.right" timestamp="1628755744817">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2182" height="301" key="GridCell.Tab.3.right/0.0.2560.1400@0.0.2560.1400" timestamp="1628755744817" />
+    <state x="781" y="344" key="SettingsEditor" timestamp="1628751159787">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="781" y="344" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1628751159787" />
+    <state x="872" y="432" key="Vcs.Push.Dialog.v2" timestamp="1628676172036">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="872" y="432" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1628676172036" />
     <state x="1074" y="612" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1628676099333">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -168,5 +404,9 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="654" y="360" key="new project wizard/0.0.2560.1400@0.0.2560.1400" timestamp="1628146450051" />
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1628752238557">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1628752238557" />
   </component>
 </project>

@@ -97,7 +97,7 @@ public class TestIdGenerator {
             }
         };
         IdGenerator idGenerator = new DefaultIdGenerator(config);
-        for (int i=0; i<20; i++){
+        for (int i=0; i<2; i++){
             String id = idGenerator.next();
             System.out.println(id);
             try {

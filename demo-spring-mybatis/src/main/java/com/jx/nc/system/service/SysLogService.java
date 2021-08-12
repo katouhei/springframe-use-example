@@ -12,7 +12,6 @@ import java.util.List;
 import java.util.Map;
 
 @Service
-@Transactional
 public class SysLogService {
 
     private static final Logger logger = LoggerFactory.getLogger(SysLogService.class);
@@ -50,7 +49,7 @@ public class SysLogService {
         return false;
     }
 
-    public void allexec(SysLog log) throws Exception {
+    public void replaceUpdate(SysLog log) throws Exception {
         System.out.println("更新结果：" + update(log));
         System.out.println("新增结果：" + add(log));
     }

@@ -47,6 +47,12 @@
             <artifactId>aspectjweaver</artifactId>
             <version>1.9.6</version>
         </dependency>
+        <!-- aop aspect注解导包-->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>1.9.6</version>
+        </dependency>
         <!--spring AOP 允许开发者定义方法拦截器和切点-->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -129,6 +135,39 @@
             <artifactId>commons-lang3</artifactId>
             <version>3.12.0</version>
         </dependency>
+
+        <!-- 分布式事务 -->
+        <dependency>
+            <groupId>jotm</groupId>
+            <artifactId>jotm</artifactId>
+            <version>2.0.10</version>
+        </dependency>
+        <dependency>
+            <groupId>org.ow2.jotm</groupId>
+            <artifactId>jotm-core</artifactId>
+            <version>2.3.1-M1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.ow2.jotm</groupId>
+            <artifactId>jotm-datasource</artifactId>
+            <version>2.3.1-M1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.ow2.jotm</groupId>
+            <artifactId>jotm-standalone</artifactId>
+            <version>2.3.1-M1</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.resource</groupId>
+            <artifactId>javax.resource-api</artifactId>
+            <version>1.7</version>
+        </dependency>
+        <dependency>
+            <groupId>com.experlog</groupId>
+            <artifactId>xapool</artifactId>
+            <version>1.6-beta</version>
+        </dependency>
+
     </dependencies>
 
 </project>

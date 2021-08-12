@@ -12,7 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.List;
@@ -20,9 +19,9 @@ import java.util.List;
 
 @RunWith(SpringRunner.class)
 @ContextConfiguration(locations = {"classpath:spring-db.xml", "classpath:spring-standalone-redis.xml", "classpath:spring-single-redis.xml", "classpath:spring-pkgenerate-redis.xml"})
-public class TestSysLog {
+public class DemoSysLog {
 
-    private static final Logger logger = LoggerFactory.getLogger(TestSysLog.class);
+    private static final Logger logger = LoggerFactory.getLogger(DemoSysLog.class);
 
     @Autowired
     private SysLogService sysLogService;
@@ -41,7 +40,7 @@ public class TestSysLog {
 //        log.setCreateTime(LocalDateTime.now());
 ////        System.out.println("更新结果：" + sysLogService.update(log));
 ////        System.out.println("新增结果：" + sysLogService.add(log));
-//        sysLogService.replaceUpdate(log);
+//        sysLogService.allexec(log);
 
         List<SysLog> list = sysLogService.select(new HashMap());
         System.out.println("查询结果：" + JSONUtil.toJsonStr(list));

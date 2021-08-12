@@ -2,6 +2,7 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:mvc="http://www.springframework.org/schema/mvc"
        xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans
@@ -9,8 +10,12 @@
         http://www.springframework.org/schema/mvc
         http://www.springframework.org/schema/mvc/spring-mvc.xsd
         http://www.springframework.org/schema/context
-        http://www.springframework.org/schema/context/spring-context.xsd">
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd">
 
+    <!--针对spring mvc项目中启动后在配置文件中加入如下内容，切点才有作用-->
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
     <!--开启组件包扫描-->
     <context:component-scan base-package="com.jx.nc">
         <!--配置只扫描  @Controller注解   include包含的意思 (也可以配置全局扫描,但是最好用什么就扫描什么)-->
@@ -18,7 +23,7 @@
     </context:component-scan>
 
     <!-- Spring MVC不处理静态资源 -->
-    <mvc:default-servlet-handler />
+    <mvc:default-servlet-handler/>
 
     <!-- 支持mvc注解驱动 -->
     <!--注解驱动 -->
@@ -32,7 +37,8 @@
     <bean id="stringHttpMessageConverter" class="org.springframework.http.converter.StringHttpMessageConverter"/>
 
     <!--解决IE浏览器json文件下载和json数据中乱码的问题-->
-    <bean id="mappingJackson2HttpMessageConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+    <bean id="mappingJackson2HttpMessageConverter"
+          class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
         <property name="supportedMediaTypes">
             <list>
                 <value>text/html;charset=UTF-8</value>
@@ -49,8 +55,8 @@
         <property name="suffix" value=".jsp"></property>
     </bean>
     <!-- 设置静态资源不过滤 -->
-<!--    <mvc:resources location="/css/" mapping="/css/**"/>  &lt;!&ndash; 样式 &ndash;&gt;-->
-<!--    <mvc:resources location="/images/" mapping="/images/**"/>  &lt;!&ndash; 图片 &ndash;&gt;-->
-<!--    <mvc:resources location="/assets/" mapping="/assets/js/**"/>  &lt;!&ndash; javascript &ndash;&gt;-->
+    <!--    <mvc:resources location="/css/" mapping="/css/**"/>  &lt;!&ndash; 样式 &ndash;&gt;-->
+    <!--    <mvc:resources location="/images/" mapping="/images/**"/>  &lt;!&ndash; 图片 &ndash;&gt;-->
+    <!--    <mvc:resources location="/assets/" mapping="/assets/js/**"/>  &lt;!&ndash; javascript &ndash;&gt;-->
 
 </beans>

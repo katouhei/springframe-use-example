@@ -15,6 +15,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 public class SysLogController {
@@ -35,13 +36,30 @@ public class SysLogController {
         SysLog log = new SysLog();
         log.setLogId(standaloneRedisService.generatorDefaultId("LOG"));
 //        log.setLogId("LOG202108110000005");
-        log.setLogInfo("测试新增日志"+ LocalDateTime.now().format(FORMATTER));
+        log.setLogInfo("测试新增日志" + LocalDateTime.now().format(FORMATTER));
         log.setCreateTime(LocalDateTime.now());
-        if(sysLogService.add(log)) {
-            return "新增日志成功";
+        Map resultMap = new HashMap<>();
+        if (sysLogService.add(log)) {
+            resultMap.put("msg", "新增日志成功");
+        } else {
+            resultMap.put("msg", "新增日志失败");
         }
-        return "新增日志失败";
+        return JSONUtil.toJsonStr(resultMap);
 
+    }
+
+    @RequestMapping("/syslog/replaceUpdate")
+    @ResponseBody
+    public String replaceUpdate() throws Exception {
+        SysLog log = new SysLog();
+        log.setLogId(standaloneRedisService.generatorDefaultId("LOG"));
+//        log.setLogId("LOG202108120000007");
+        log.setLogInfo("测试新增或更新日志" + LocalDateTime.now().format(FORMATTER));
+        log.setCreateTime(LocalDateTime.now());
+        Map resultMap = new HashMap<>();
+        sysLogService.replaceUpdate(log);
+        resultMap.put("msg", "执行完成");
+        return JSONUtil.toJsonStr(resultMap);
     }
 
     @RequestMapping("/syslog/query")
