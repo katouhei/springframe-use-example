@@ -61,12 +61,14 @@ public class SysLogController {
     @ResponseBody
     public String replaceUpdate() throws Exception {
         SysLog log = new SysLog();
-        log.setLogId(standaloneRedisService.generatorDefaultId("LOG"));
-//        log.setLogId("LOG202108120000007");
-        log.setLogInfo("测试新增或更新日志" + LocalDateTime.now().format(FORMATTER));
+//        log.setLogId(standaloneRedisService.generatorDefaultId("LOG"));
+        log.setLogId("LOG202108130000001");
+        log.setLogInfo("测试aa新增或更新日志" + LocalDateTime.now().format(FORMATTER));
         log.setCreateTime(LocalDateTime.now());
         Map resultMap = new HashMap<>();
-        sysLogService.replaceUpdate(log);
+        sysLogService.updateById(log);
+        sysLogService.save(log);
+//        sysLogService.replaceUpdate(log);
         resultMap.put("msg", "执行完成");
         return JSONUtil.toJsonStr(resultMap);
     }
