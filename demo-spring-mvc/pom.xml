@@ -36,7 +36,7 @@
         </dependency>
         <dependency>
             <groupId>org.example</groupId>
-            <artifactId>demo-spring-mybatis</artifactId>
+            <artifactId>demo-spring-mybatisplus</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <!--spring核心包-->

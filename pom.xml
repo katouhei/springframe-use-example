@@ -12,6 +12,7 @@
         <module>demo-spring-data</module>
         <module>demo-spring-mvc</module>
         <module>demo-spring-mybatis</module>
+        <module>demo-spring-mybatisplus</module>
     </modules>
     <properties>
         <!-- 文件拷贝时的编码 -->

@@ -12,7 +12,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 @RunWith(SpringRunner.class)
-@ContextConfiguration(locations = {"classpath:spring-standalone-redis.xml", "classpath:spring-single-redis.xml", "classpath:spring-pkgenerate-redis.xml"})
+@ContextConfiguration(locations = {"classpath:spring-standalone-redis.xml", "classpath:spring-pkgenerate-redis.xml"})
 public class TestStandaloneUtils {
 
     @Autowired

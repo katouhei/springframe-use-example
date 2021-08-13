@@ -14,32 +14,40 @@
     http://www.springframework.org/schema/tx/spring-tx.xsd">
 
     <context:property-placeholder location="classpath*:config/*.properties"></context:property-placeholder>
-<!--    &lt;!&ndash; 还可以是下面方式，加载多个目录中的 &ndash;&gt;-->
-<!--    <context:property-placeholder location="classpath:*.properties,classpath:*/*.properties" />-->
+    <!--    &lt;!&ndash; 还可以是下面方式，加载多个目录中的 &ndash;&gt;-->
+    <!--    <context:property-placeholder location="classpath:*.properties,classpath:*/*.properties" />-->
 
 
     <!--注册数据源  使用阿里巴巴的druid连接池-->
     <bean id="abstractDataSource" class="com.alibaba.druid.pool.DruidDataSource">
-        <property name="initialSize" value="${jdbc.initialSize}" />
-        <property name="minIdle" value="${jdbc.minIdle}" />
-        <property name="maxActive" value="${jdbc.maxActive}" />
-        <property name="maxWait" value="${jdbc.maxWait}" />
-        <!-- 超过时间限制是否回收 -->
-        <property name="removeAbandoned" value="${jdbc.removeAbandoned}" />
-        <!-- 超过时间限制多长； -->
-        <property name="removeAbandonedTimeout" value="${jdbc.removeAbandonedTimeout}" />
+        <!-- 初始化连接大小 -->
+        <property name="initialSize" value="5" />
+        <!-- 连接池最大使用连接数量 -->
+        <property name="maxActive" value="200" />
+        <!-- 连接池最小空闲 -->
+        <property name="minIdle" value="5" />
+        <!-- 获取连接最大等待时间 -->
+        <property name="maxWait" value="60000" />
+        <!-- <property name="poolPreparedStatements" value="true" /> <property
+            name="maxPoolPreparedStatementPerConnectionSize" value="33" /> -->
+        <!-- <property name="validationQuery" value="${jdbc.validationQuery}" /> -->
+        <property name="testOnBorrow" value="false" />
+        <property name="testOnReturn" value="false" />
+        <property name="testWhileIdle" value="true" />
         <!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 -->
-        <property name="timeBetweenEvictionRunsMillis" value="${jdbc.timeBetweenEvictionRunsMillis}" />
+        <property name="timeBetweenEvictionRunsMillis" value="60000" />
         <!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
-        <property name="minEvictableIdleTimeMillis" value="${jdbc.minEvictableIdleTimeMillis}" />
-        <!-- 用来检测连接是否有效的sql，要求是一个查询语句-->
-        <property name="validationQuery" value="${jdbc.validationQuery}" />
-        <!-- 申请连接的时候检测 -->
-        <property name="testWhileIdle" value="${jdbc.testWhileIdle}" />
-        <!-- 申请连接时执行validationQuery检测连接是否有效，配置为true会降低性能 -->
-        <property name="testOnBorrow" value="${jdbc.testOnBorrow}" />
-        <!-- 归还连接时执行validationQuery检测连接是否有效，配置为true会降低性能  -->
-        <property name="testOnReturn" value="${jdbc.testOnReturn}" />
+        <property name="minEvictableIdleTimeMillis" value="25200000" />
+        <!-- 打开removeAbandoned功能 -->
+        <property name="removeAbandoned" value="true" />
+        <!-- 1800秒，也就是30分钟 -->
+        <property name="removeAbandonedTimeout" value="1800" />
+        <!-- 关闭abanded连接时输出错误日志 -->
+        <property name="logAbandoned" value="true" />
+        <!-- 监控数据库 -->
+        <!-- <property name="filters" value="mergeStat" /> -->
+        <property name="filters" value="stat" />
+        <property name="defaultAutoCommit" value="true" />
     </bean>
     <!--注册数据源  使用阿里巴巴的druid连接池-->
     <bean id="masterDataSource" parent="abstractDataSource" init-method="init" destroy-method="close">
@@ -51,7 +59,7 @@
     </bean>
 
     <!--注册数据源  使用阿里巴巴的druid连接池-->
-    <bean id="slaveDataSource" parent="abstractDataSource" init-method="init" destroy-method="close">
+    <bean id="slaveDataSource" parent="abstractDataSource">
         <property name="driverClassName" value="${jdbc.driver}"></property>
         <property name="url" value="${jdbc.slave.url}"></property>
         <property name="username" value="${jdbc.username}"></property>
@@ -76,43 +84,24 @@
         <property name="dataSource" ref="dynamicDataSource"></property>
     </bean>
 
-    <tx:advice id="txAdvice" transaction-manager="transactionManager">
-        <tx:attributes>
-            <tx:method name="select*" read-only="true" />
-            <tx:method name="find*" read-only="true"/>
-            <tx:method name="get*" read-only="true"/>
-            <tx:method name="query*" read-only="true"/>
-            <tx:method name="*" propagation="REQUIRED"/>
-        </tx:attributes>
-    </tx:advice>
+<!--    &lt;!&ndash; JOTM实例 &ndash;&gt;-->
+<!--    <bean id="jotm" class="org.springframework.transaction.jta.JotmFactoryBean">-->
+<!--        <property name="defaultTimeout" value="500000"/>-->
+<!--    </bean>-->
 
-    <!--AOP切入  -->
-    <aop:config>
-        <!--切入点  -->
-        <aop:pointcut expression="execution(* com.jx.nc.*.service.*.*(..))" id="services"/>
-        <!-- 配置切面 -->
-        <aop:advisor advice-ref="txAdvice" pointcut-ref="services" />
-    </aop:config>
+<!--    &lt;!&ndash; JTA事务管理器 &ndash;&gt;-->
+<!--    <bean id="jtaTransactionManager" class="org.springframework.transaction.jta.JtaTransactionManager">-->
+<!--        <property name="userTransaction" ref="jotm" />-->
+<!--    </bean>-->
 
-    <!-- spring和MyBatis完美整合，不需要mybatis的配置映射文件 -->
-    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="dataSource" ref="dynamicDataSource"/>
-        <property name="configLocation" value="classpath:mybatis-config.xml"/>
-        <!-- 自动扫描mapping.xml文件 -->
-        <property name="mapperLocations" value="classpath:mapper/**/*Mapper.xml"></property>
-    </bean>
-
-    <!-- DAO接口所在包名，Spring会自动查找其下的类 -->
-    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.jx.nc.*.mapper"/>
-        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
-    </bean>
+    <!-- 启用 annotation事务 -->
+    <tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true"/>
 
     <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
         <property name="dataSource" ref="dynamicDataSource" />
     </bean>
     <!--开启组件包扫描-->
-    <context:component-scan base-package="com.jx.nc.system,com.jx.nc.datasource.aop"/>
+    <context:component-scan base-package="com.jx.nc.datasource.aop"/>
     <!--开启切点-->
     <aop:aspectj-autoproxy proxy-target-class="true"/>
 </beans>

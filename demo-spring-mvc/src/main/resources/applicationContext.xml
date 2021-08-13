@@ -7,8 +7,7 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <import resource="spring-db.xml"/>
-    <import resource="spring-single-redis.xml"/>
+    <import resource="spring-mybatis-plus.xml"/>
     <import resource="spring-pkgenerate-redis.xml"/>
     <import resource="spring-standalone-redis.xml"/>
     <!--开启组件包扫描-->

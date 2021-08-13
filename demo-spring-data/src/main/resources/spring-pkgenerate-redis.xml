@@ -7,10 +7,7 @@
                         http://www.springframework.org/schema/context
                         http://www.springframework.org/schema/context/spring-context.xsd">
 
-<!--    <context:component-scan base-package="com.jx.nc.*"></context:component-scan>-->
-    <bean class="com.jx.nc.pkgenerate.redis.SingleRedisService" id="singleRedisService"></bean>
-    <bean class="com.jx.nc.pkgenerate.DefaultPkGenerator">
-        <constructor-arg name="singleRedisService" ref="singleRedisService"/>
+    <context:component-scan base-package="com.jx.nc.pkgenerate.redis"></context:component-scan>
+    <bean class="com.jx.nc.pkgenerate.DefaultPkGenerator" init-method="init" destroy-method="close">
     </bean>
-    <bean class="com.jx.nc.pkgenerate.redis.StandaloneRedisService"></bean>
 </beans>

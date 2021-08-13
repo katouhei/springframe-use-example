@@ -1,17 +1,16 @@
 package com.jx.nc.pkgenerate;
 
 import cn.hutool.core.util.StrUtil;
-import com.jx.nc.pkgenerate.redis.SingleRedisService;
+import com.jx.nc.pkgenerate.redis.StandaloneRedisService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
-@Component
 public class DefaultPkGenerator extends DefaultPkGeneratorConfig implements PkGenerator, Runnable {
 
     private Logger log = LoggerFactory.getLogger(DefaultPkGeneratorConfig.class);
@@ -26,15 +25,19 @@ public class DefaultPkGenerator extends DefaultPkGeneratorConfig implements PkGe
 
     private ReentrantReadWriteLock lock = new ReentrantReadWriteLock();
 
-    private SingleRedisService singleRedisService;
+    @Autowired
+    private StandaloneRedisService standaloneRedisService;
 
-    public DefaultPkGenerator(SingleRedisService singleRedisService) {
+    public void init() {
         time = LocalDateTime.now().format(FORMATTER);
-        this.singleRedisService = singleRedisService;
-        value = new AtomicInteger(singleRedisService.getSeq());
+        value = new AtomicInteger(standaloneRedisService.getSeq());
         thread = new Thread(this);
         thread.setDaemon(true);
         thread.start();
+    }
+
+    public void close() {
+        standaloneRedisService.setSeq(value.get());
     }
 
     @Override
@@ -53,13 +56,13 @@ public class DefaultPkGenerator extends DefaultPkGeneratorConfig implements PkGe
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            singleRedisService.setSeq(value.get());
+            standaloneRedisService.setSeq(value.get());
             String now = LocalDateTime.now().format(FORMATTER);
             if (!now.equals(time)) {
                 lock.writeLock().lock();
                 time = now;
-                singleRedisService.setSeq(0);
-                value.set(singleRedisService.getSeq());
+                standaloneRedisService.setSeq(0);
+                value.set(standaloneRedisService.getSeq());
                 lock.writeLock().unlock();
             }
         }

@@ -2,8 +2,8 @@ package com.jx.nc;
 
 import cn.hutool.json.JSONUtil;
 import com.jx.nc.pkgenerate.redis.StandaloneRedisService;
-import com.jx.nc.system.bean.SysLog;
-import com.jx.nc.system.service.SysLogService;
+import com.jx.nc.sys.entity.SysLog;
+import com.jx.nc.sys.service.ISysLogService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -12,21 +12,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import javax.annotation.Resource;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.HashMap;
 import java.util.List;
 
 
 @RunWith(SpringRunner.class)
-@ContextConfiguration(locations = {"classpath:spring-mybatis.xml", "classpath:spring-standalone-redis.xml", "classpath:spring-pkgenerate-redis.xml"})
-public class TestSysLog {
+@ContextConfiguration(locations = {"classpath:spring-mybatis-plus.xml", "classpath:spring-standalone-redis.xml", "classpath:spring-pkgenerate-redis.xml"})
+public class TestplusSysLog {
 
-    private static final Logger logger = LoggerFactory.getLogger(TestSysLog.class);
+    private static final Logger logger = LoggerFactory.getLogger(TestplusSysLog.class);
 
-    @Resource
-    private SysLogService sysLogService;
+    @Autowired
+    private ISysLogService sysLogService;
 
     @Autowired
     private StandaloneRedisService standaloneRedisService;
@@ -35,16 +33,20 @@ public class TestSysLog {
 
     @Test
     public void test1() throws Exception {
-//        SysLog log = new SysLog();
-//        log.setLogId(standaloneRedisService.generatorDefaultId("LOG"));
-////        log.setLogId("LOG202108110000005");
-//        log.setLogInfo("测试新增日志"+LocalDateTime.now().format(FORMATTER));
+//        SysLog log = sysLogService.getById("LOG202108120000007");
+//        System.out.println("结果："+ JSONUtil.toJsonStr(log));
+//
+//        log = new SysLog();
+////        log.setLogId(standaloneRedisService.generatorDefaultId("LOG"));
+//        log.setLogId("LOG202108130000001");
+//        log.setLogInfo("测试日志"+LocalDateTime.now().format(FORMATTER));
 //        log.setCreateTime(LocalDateTime.now());
 ////        System.out.println("更新结果：" + sysLogService.update(log));
 ////        System.out.println("新增结果：" + sysLogService.add(log));
-//        sysLogService.replaceUpdate(log);
-
-        List<SysLog> list = sysLogService.select(new HashMap());
+////        sysLogService.replaceUpdate(log);
+//        sysLogService.updateById(log);
+//        sysLogService.save(log);
+        List<SysLog> list = sysLogService.list();
         System.out.println("查询结果：" + JSONUtil.toJsonStr(list));
 
         logger.info(JSONUtil.toJsonStr(list));

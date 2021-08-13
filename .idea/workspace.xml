@@ -11,6 +11,15 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
     </expand>
     <select>
       <path>
@@ -22,30 +31,52 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7fc8a8e-e4e7-4f09-86d4-fce274d4c7e5" name="Default Changelist" comment="加入spring-data-redis相关依赖">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-spring-mvc/src/main/java/com/jx/nc/filter/ControllerExceptionResolver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-spring-mvc/src/test/java/com/jx/nc/DemoSysLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-spring-mybatis/src/main/java/com/jx/nc/system/impl/SysLogServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-spring-mybatis/src/main/resources/spring-db-con.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo-spring-mvc/src/main/java/com/jx/nc/sys/controller/SysLogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo-spring-mvc/src/main/java/com/jx/nc/sys/controller/SysUserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo-spring-mybatis/src/main/resources/spring-mybatis.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo-spring-mybatisplus/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo-spring-mybatisplus/src/main/java/com/jx/nc/sys/entity/SysLog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo-spring-mybatisplus/src/main/java/com/jx/nc/sys/entity/SysUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo-spring-mybatisplus/src/main/java/com/jx/nc/sys/mapper/SysLogMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo-spring-mybatisplus/src/main/java/com/jx/nc/sys/mapper/SysUserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo-spring-mybatisplus/src/main/java/com/jx/nc/sys/mapper/xml/SysLogXml.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo-spring-mybatisplus/src/main/java/com/jx/nc/sys/mapper/xml/SysUserXml.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo-spring-mybatisplus/src/main/java/com/jx/nc/sys/service/ISysLogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo-spring-mybatisplus/src/main/java/com/jx/nc/sys/service/ISysUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo-spring-mybatisplus/src/main/java/com/jx/nc/sys/service/impl/SysLogServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo-spring-mybatisplus/src/main/java/com/jx/nc/sys/service/impl/SysUserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo-spring-mybatisplus/src/main/resources/spring-mybatis-plus.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo-spring-mybatisplus/src/test/java/com/jx/nc/GeneratorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo-spring-mybatisplus/src/test/java/com/jx/nc/MpGeneratorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo-spring-mybatisplus/src/test/java/com/jx/nc/TestplusSysLog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-data/src/test/java/com/jx/nc/TestIdGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-data/src/test/java/com/jx/nc/TestIdGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-spring-data/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-data/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-spring-data/src/main/java/com/jx/nc/pkgenerate/DefaultPkGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-data/src/main/java/com/jx/nc/pkgenerate/DefaultPkGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-spring-data/src/main/java/com/jx/nc/pkgenerate/redis/SingleRedisService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-spring-data/src/main/java/com/jx/nc/pkgenerate/redis/StandaloneRedisService.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-data/src/main/java/com/jx/nc/pkgenerate/redis/StandaloneRedisService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-spring-data/src/main/resources/spring-pkgenerate-redis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-data/src/main/resources/spring-pkgenerate-redis.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-spring-data/src/test/java/com/jx/nc/TestPKGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-data/src/test/java/com/jx/nc/TestPKGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-spring-data/src/test/java/com/jx/nc/TestStandaloneUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-data/src/test/java/com/jx/nc/TestStandaloneUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-spring-mvc/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mvc/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-spring-mvc/src/main/java/com/jx/nc/filter/ControllerExceptionResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mvc/src/main/java/com/jx/nc/filter/ControllerExceptionResolver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo-spring-mvc/src/main/java/com/jx/nc/system/controller/SysLogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mvc/src/main/java/com/jx/nc/system/controller/SysLogController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo-spring-mvc/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mvc/src/main/resources/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-mvc/src/main/resources/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mvc/src/main/resources/spring-mvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-mybatis/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mybatis/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-mybatis/src/main/java/com/jx/nc/datasource/DynamicDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mybatis/src/main/java/com/jx/nc/datasource/DynamicDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-mybatis/src/main/java/com/jx/nc/datasource/DynamicDataSourceContextHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mybatis/src/main/java/com/jx/nc/datasource/DynamicDataSourceContextHolder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-mybatis/src/main/java/com/jx/nc/datasource/aop/DataSourceAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mybatis/src/main/java/com/jx/nc/datasource/aop/DataSourceAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-mybatis/src/main/java/com/jx/nc/system/service/SysLogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mybatis/src/main/java/com/jx/nc/system/service/SysLogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-mybatis/src/main/resources/spring-db.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mybatis/src/main/resources/spring-db.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-spring-mvc/src/test/java/com/jx/nc/DemoSysLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mvc/src/test/java/com/jx/nc/DemoSysLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-spring-mybatis/src/main/java/com/jx/nc/datasource/DynamicDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-data/src/main/java/com/jx/nc/datasource/DynamicDataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-spring-mybatis/src/main/java/com/jx/nc/datasource/DynamicDataSourceContextHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-data/src/main/java/com/jx/nc/datasource/DynamicDataSourceContextHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-spring-mybatis/src/main/java/com/jx/nc/datasource/aop/DataSourceAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-data/src/main/java/com/jx/nc/datasource/aop/DataSourceAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-spring-mybatis/src/main/resources/config/mysql.properties" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-data/src/main/resources/config/mysql.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-spring-mybatis/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-data/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-spring-mybatis/src/main/resources/spring-db-con.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-data/src/main/resources/spring-db-con.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-spring-mybatis/src/main/resources/spring-db.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-data/src/main/resources/spring-db.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo-spring-mybatis/src/test/java/com/jx/nc/TestSysLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mybatis/src/test/java/com/jx/nc/TestSysLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-spring-mybatis/src/test/java/com/jx/nc/TestSysUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mybatis/src/test/java/com/jx/nc/TestSysUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
+    <list id="a1f727a9-1073-4cf7-806e-a94f3d6b3f26" name="Uncommitted changes before Update at 2021/8/13 15:09 [Default Changelist]" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -90,17 +121,24 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../driver_phyexam_plus" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/demo-spring-data/src/main/resources" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.jx.nc" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace\other\springframe-use\demo-spring-data\src\main\resources" />
+      <recent name="D:\workspace\other\springframe-use\demo-spring-data\src\main\resources\config" />
+      <recent name="D:\workspace\other\springframe-use\demo-spring-data\src\main\java\com\jx\nc" />
+      <recent name="D:\workspace\other\springframe-use\demo-spring-mybatisplus\src\main\resources" />
+      <recent name="D:\workspace\other\springframe-use\demo-spring-mybatisplus\src\main\java\com\jx\nc" />
+    </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.demospring">
-    <configuration name="DemoSysLog" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="demo-spring-mvc" />
+    <configuration name="TestPKGenerator.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo-spring-data" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.jx.nc.*" />
@@ -108,30 +146,15 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.jx.nc" />
-      <option name="MAIN_CLASS_NAME" value="com.jx.nc.DemoSysLog" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DemoSysLog.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="demo-spring-mvc" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jx.nc.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.jx.nc" />
-      <option name="MAIN_CLASS_NAME" value="com.jx.nc.DemoSysLog" />
-      <option name="METHOD_NAME" value="test1" />
+      <option name="MAIN_CLASS_NAME" value="com.jx.nc.TestPKGenerator" />
+      <option name="METHOD_NAME" value="test2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestSysLog" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="demo-spring-mybatis" />
+    <configuration name="TestStandaloneUtils" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo-spring-data" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.jx.nc.*" />
@@ -139,7 +162,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.jx.nc" />
-      <option name="MAIN_CLASS_NAME" value="com.jx.nc.TestSysLog" />
+      <option name="MAIN_CLASS_NAME" value="com.jx.nc.TestStandaloneUtils" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -155,6 +178,54 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.jx.nc" />
       <option name="MAIN_CLASS_NAME" value="com.jx.nc.TestSysLog" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestSysUser.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo-spring-mybatis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jx.nc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jx.nc" />
+      <option name="MAIN_CLASS_NAME" value="com.jx.nc.TestSysUser" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestplusSysLog.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo-spring-mybatisplus" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jx.nc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jx.nc" />
+      <option name="MAIN_CLASS_NAME" value="com.jx.nc.TestplusSysLog" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestplusSysLog.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo-spring-mybatisplus" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jx.nc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jx.nc" />
+      <option name="MAIN_CLASS_NAME" value="com.jx.nc.TestplusSysLog" />
       <option name="METHOD_NAME" value="test1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -238,18 +309,20 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.TestPKGenerator.test2" />
+      <item itemvalue="JUnit.TestStandaloneUtils" />
+      <item itemvalue="JUnit.TestplusSysLog.test1" />
+      <item itemvalue="JUnit.TestSysUser.test1" />
       <item itemvalue="Tomcat Server.demospring" />
       <item itemvalue="JUnit.TestSysLog.test1" />
-      <item itemvalue="JUnit.DemoSysLog.test1" />
-      <item itemvalue="JUnit.DemoSysLog" />
-      <item itemvalue="JUnit.TestSysLog" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestSysLog" />
-        <item itemvalue="JUnit.DemoSysLog" />
-        <item itemvalue="JUnit.DemoSysLog.test1" />
         <item itemvalue="JUnit.TestSysLog.test1" />
+        <item itemvalue="JUnit.TestSysUser.test1" />
+        <item itemvalue="JUnit.TestplusSysLog.test1" />
+        <item itemvalue="JUnit.TestStandaloneUtils" />
+        <item itemvalue="JUnit.TestPKGenerator.test2" />
       </list>
     </recent_temporary>
   </component>
@@ -259,12 +332,14 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="e7fc8a8e-e4e7-4f09-86d4-fce274d4c7e5" name="Default Changelist" comment="" />
+      <changelist id="a1f727a9-1073-4cf7-806e-a94f3d6b3f26" name="Uncommitted changes before Update at 2021/8/13 15:09 [Default Changelist]" comment="" />
       <created>1628146216303</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1628146216303</updated>
       <workItem from="1628146226808" duration="1198000" />
-      <workItem from="1628728756099" duration="19619000" />
+      <workItem from="1628728756099" duration="23631000" />
+      <workItem from="1628814914171" duration="18120000" />
     </task>
     <task id="LOCAL-00001" summary="spring框架使用redis、mybatis等">
       <created>1628676165266</created>
@@ -273,7 +348,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628676165266</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="完善数据库读写分离、controller异常统一处理、AOP切面事务处理">
+      <created>1628759009821</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1628759009821</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,108 +387,136 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="spring框架使用redis、mybatis等" />
-    <option name="LAST_COMMIT_MESSAGE" value="spring框架使用redis、mybatis等" />
+    <MESSAGE value="完善数据库读写分离、controller异常统一处理、AOP切面事务处理" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善数据库读写分离、controller异常统一处理、AOP切面事务处理" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="734" y="354" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1628730592471">
+    <state x="734" y="354" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1628824743737">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="734" y="354" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1628730592471" />
-    <state x="1001" y="500" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1628750235757">
+    <state x="734" y="354" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1628824743737" />
+    <state x="1001" y="500" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1628825389484">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1001" y="500" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1628750235757" />
-    <state x="1085" y="405" key="#com.intellij.ide.util.MemberChooser" timestamp="1628754894983">
+    <state x="1001" y="500" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1628825389484" />
+    <state x="1085" y="405" key="#com.intellij.ide.util.MemberChooser" timestamp="1628827196598">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1085" y="405" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1628754894983" />
-    <state x="1060" y="440" key="FileChooserDialogImpl" timestamp="1628751863369">
+    <state x="1085" y="405" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1628827196598" />
+    <state x="1010" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1628833455583">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1060" y="440" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1628751863369" />
-    <state width="2182" height="301" key="GridCell.Tab.0.bottom" timestamp="1628755745018">
+    <state x="1010" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1628833455583" />
+    <state x="1060" y="440" key="FileChooserDialogImpl" timestamp="1628816037702">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2182" height="301" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1628755745018" />
-    <state width="2182" height="301" key="GridCell.Tab.0.center" timestamp="1628755745018">
+    <state x="1060" y="440" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1628816037702" />
+    <state width="2024" height="412" key="GridCell.Tab.0.bottom" timestamp="1628838806600">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2182" height="301" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1628755745018" />
-    <state width="2182" height="301" key="GridCell.Tab.0.left" timestamp="1628755745018">
+    <state width="2024" height="412" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1628838806600" />
+    <state width="2024" height="412" key="GridCell.Tab.0.center" timestamp="1628838806600">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2182" height="301" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1628755745018" />
-    <state width="2182" height="301" key="GridCell.Tab.0.right" timestamp="1628755745018">
+    <state width="2024" height="412" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1628838806600" />
+    <state width="2024" height="412" key="GridCell.Tab.0.left" timestamp="1628838806600">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2182" height="301" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1628755745018" />
-    <state width="2182" height="301" key="GridCell.Tab.1.bottom" timestamp="1628755745018">
+    <state width="2024" height="412" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1628838806600" />
+    <state width="2024" height="412" key="GridCell.Tab.0.right" timestamp="1628838806600">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2182" height="301" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1628755745018" />
-    <state width="2182" height="301" key="GridCell.Tab.1.center" timestamp="1628755745018">
+    <state width="2024" height="412" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1628838806600" />
+    <state width="2031" height="239" key="GridCell.Tab.1.bottom" timestamp="1628838704601">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2182" height="301" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1628755745018" />
-    <state width="2182" height="301" key="GridCell.Tab.1.left" timestamp="1628755745018">
+    <state width="2031" height="239" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1628838704601" />
+    <state width="2031" height="239" key="GridCell.Tab.1.center" timestamp="1628838704601">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2182" height="301" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1628755745018" />
-    <state width="2182" height="301" key="GridCell.Tab.1.right" timestamp="1628755745018">
+    <state width="2031" height="239" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1628838704601" />
+    <state width="2031" height="239" key="GridCell.Tab.1.left" timestamp="1628838704601">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2182" height="301" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1628755745018" />
-    <state width="2182" height="301" key="GridCell.Tab.2.bottom" timestamp="1628755744817">
+    <state width="2031" height="239" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1628838704601" />
+    <state width="2031" height="239" key="GridCell.Tab.1.right" timestamp="1628838704601">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2182" height="301" key="GridCell.Tab.2.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1628755744817" />
-    <state width="2182" height="301" key="GridCell.Tab.2.center" timestamp="1628755744817">
+    <state width="2031" height="239" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1628838704601" />
+    <state width="1925" height="652" key="GridCell.Tab.2.bottom" timestamp="1628835998511">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2182" height="301" key="GridCell.Tab.2.center/0.0.2560.1400@0.0.2560.1400" timestamp="1628755744817" />
-    <state width="2182" height="301" key="GridCell.Tab.2.left" timestamp="1628755744817">
+    <state width="1925" height="652" key="GridCell.Tab.2.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1628835998511" />
+    <state width="1925" height="652" key="GridCell.Tab.2.center" timestamp="1628835998511">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2182" height="301" key="GridCell.Tab.2.left/0.0.2560.1400@0.0.2560.1400" timestamp="1628755744817" />
-    <state width="2182" height="301" key="GridCell.Tab.2.right" timestamp="1628755744817">
+    <state width="1925" height="652" key="GridCell.Tab.2.center/0.0.2560.1400@0.0.2560.1400" timestamp="1628835998511" />
+    <state width="1925" height="652" key="GridCell.Tab.2.left" timestamp="1628835998511">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2182" height="301" key="GridCell.Tab.2.right/0.0.2560.1400@0.0.2560.1400" timestamp="1628755744817" />
-    <state width="2182" height="301" key="GridCell.Tab.3.bottom" timestamp="1628755744817">
+    <state width="1925" height="652" key="GridCell.Tab.2.left/0.0.2560.1400@0.0.2560.1400" timestamp="1628835998511" />
+    <state width="1925" height="652" key="GridCell.Tab.2.right" timestamp="1628835998511">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2182" height="301" key="GridCell.Tab.3.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1628755744817" />
-    <state width="2182" height="301" key="GridCell.Tab.3.center" timestamp="1628755744817">
+    <state width="1925" height="652" key="GridCell.Tab.2.right/0.0.2560.1400@0.0.2560.1400" timestamp="1628835998511" />
+    <state width="1925" height="652" key="GridCell.Tab.3.bottom" timestamp="1628835998511">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2182" height="301" key="GridCell.Tab.3.center/0.0.2560.1400@0.0.2560.1400" timestamp="1628755744817" />
-    <state width="2182" height="301" key="GridCell.Tab.3.left" timestamp="1628755744817">
+    <state width="1925" height="652" key="GridCell.Tab.3.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1628835998511" />
+    <state width="1925" height="652" key="GridCell.Tab.3.center" timestamp="1628835998511">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2182" height="301" key="GridCell.Tab.3.left/0.0.2560.1400@0.0.2560.1400" timestamp="1628755744817" />
-    <state width="2182" height="301" key="GridCell.Tab.3.right" timestamp="1628755744817">
+    <state width="1925" height="652" key="GridCell.Tab.3.center/0.0.2560.1400@0.0.2560.1400" timestamp="1628835998511" />
+    <state width="1925" height="652" key="GridCell.Tab.3.left" timestamp="1628835998511">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2182" height="301" key="GridCell.Tab.3.right/0.0.2560.1400@0.0.2560.1400" timestamp="1628755744817" />
+    <state width="1925" height="652" key="GridCell.Tab.3.left/0.0.2560.1400@0.0.2560.1400" timestamp="1628835998511" />
+    <state width="1925" height="652" key="GridCell.Tab.3.right" timestamp="1628835998511">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1925" height="652" key="GridCell.Tab.3.right/0.0.2560.1400@0.0.2560.1400" timestamp="1628835998511" />
+    <state x="248" y="121" key="MergeDialog" timestamp="1628838623734">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="248" y="121" key="MergeDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1628838623734" />
+    <state x="927" y="401" key="RollbackChangesDialog" timestamp="1628815731511">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="927" y="401" key="RollbackChangesDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1628815731511" />
     <state x="781" y="344" key="SettingsEditor" timestamp="1628751159787">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="781" y="344" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1628751159787" />
-    <state x="872" y="432" key="Vcs.Push.Dialog.v2" timestamp="1628676172036">
+    <state x="872" y="432" key="Vcs.Push.Dialog.v2" timestamp="1628759150066">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="872" y="432" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1628676172036" />
-    <state x="1074" y="612" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1628676099333">
+    <state x="872" y="432" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1628759150066" />
+    <state x="1074" y="612" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1628838572839">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1074" y="612" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1400@0.0.2560.1400" timestamp="1628676099333" />
-    <state x="654" y="360" key="new project wizard" timestamp="1628146450051">
+    <state x="1074" y="612" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1400@0.0.2560.1400" timestamp="1628838572839" />
+    <state x="654" y="360" key="new project wizard" timestamp="1628759620341">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="654" y="360" key="new project wizard/0.0.2560.1400@0.0.2560.1400" timestamp="1628146450051" />
+    <state x="654" y="360" key="new project wizard/0.0.2560.1400@0.0.2560.1400" timestamp="1628759620341" />
     <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1628752238557">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1628752238557" />
+    <state x="667" y="446" key="vcs.ApplyPatchDifferentiatedDialog" timestamp="1628838609108">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="667" y="446" key="vcs.ApplyPatchDifferentiatedDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1628838609108" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/demo-spring-data/src/main/java/com/jx/nc/datasource/aop/DataSourceAspect.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

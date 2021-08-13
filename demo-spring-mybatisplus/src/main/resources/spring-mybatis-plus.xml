@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <import resource="spring-db.xml"/>
+    <!-- SqlSessionFactory Config -->
+    <bean id="sqlSessionFactory" class="com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean">
+        <property name="dataSource" ref="dynamicDataSource"/>
+        <!--<property name="configuration" ref="configuration"/>-->
+        <property name="mapperLocations" value="classpath:**/*Xml.xml"/>
+        <property name="globalConfig" ref="globalConfig"/>
+        <property name="plugins">
+            <array>
+                <ref bean="mybatisPlusInterceptor"/>
+            </array>
+        </property>
+    </bean>
+
+    <!--    <bean id="configuration" class="com.baomidou.mybatisplus.core.MybatisConfiguration">-->
+    <!--        <property name="useDeprecatedExecutor" value="false"/>-->
+    <!--    </bean>-->
+
+    <bean id="mybatisPlusInterceptor" class="com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor">
+        <property name="interceptors">
+            <list>
+                <ref bean="paginationInnerInterceptor"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="paginationInnerInterceptor"
+          class="com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor">
+        <constructor-arg name="dbType" value="MYSQL"/>
+    </bean>
+
+    <bean id="countSqlParser"
+          class="com.baomidou.mybatisplus.extension.plugins.pagination.optimize.JsqlParserCountOptimize">
+        <property name="optimizeJoin" value="true"/>
+    </bean>
+
+    <bean id="globalConfig" class="com.baomidou.mybatisplus.core.config.GlobalConfig">
+        <property name="dbConfig" ref="dbConfig"/>
+    </bean>
+
+    <bean id="dbConfig" class="com.baomidou.mybatisplus.core.config.GlobalConfig.DbConfig">
+        <property name="keyGenerators">
+            <list>
+                <bean class="com.baomidou.mybatisplus.extension.incrementer.KingbaseKeyGenerator"/>
+            </list>
+        </property>
+    </bean>
+
+    <!-- MyBatis Mapper Scan Config  -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.jx.nc.*.mapper"/>
+    </bean>
+    <!--开启组件包扫描-->
+    <context:component-scan base-package="com.jx.nc.sys"/>
+
+</beans>

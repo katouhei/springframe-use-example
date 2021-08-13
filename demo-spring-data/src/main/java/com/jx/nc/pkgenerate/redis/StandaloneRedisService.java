@@ -1,6 +1,7 @@
 package com.jx.nc.pkgenerate.redis;
 
 import cn.hutool.core.date.DateUtil;
+import cn.hutool.core.util.NumberUtil;
 import cn.hutool.core.util.StrUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -141,6 +142,19 @@ public class StandaloneRedisService {
             logger.error("移除key[" + pattern + "]前缀的缓存时失败", "err[" + e.getMessage() + "]");
         }
         return false;
+    }
+
+    public void setSeq(Integer seq) {
+        cacheValue("seq", String.valueOf(seq));
+    }
+
+    public Integer getSeq() {
+        Object seq = getValue("seq");
+        if (seq != null && StrUtil.isNotEmpty(String.valueOf(seq)) && NumberUtil.isInteger(String.valueOf(seq))) {
+            return NumberUtil.parseInt(String.valueOf(seq)) + 1;
+        } else {
+            return 1;
+        }
     }
 
     private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyyMMdd");
