@@ -41,7 +41,7 @@
         <!-- 归还连接时执行validationQuery检测连接是否有效，配置为true会降低性能  -->
         <property name="testOnReturn" value="${jdbc.testOnReturn}" />
         <!-- 配置监控统计拦截的filters -->
-        <property name="filters" value="stat,log4j,wall,mergeStat" />
+        <property name="filters" value="stat,log4j2,wall,mergeStat" />
     </bean>
     <!--注册数据源  使用阿里巴巴的druid连接池-->
     <bean id="masterDataSource" parent="abstractDataSource" init-method="init" destroy-method="close">

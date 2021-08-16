@@ -1,6 +1,8 @@
 package com.jx.nc;
 
 import cn.hutool.json.JSONUtil;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.jx.nc.pkgenerate.redis.StandaloneRedisService;
 import com.jx.nc.sys.entity.SysLog;
 import com.jx.nc.sys.service.ISysLogService;
@@ -46,9 +48,13 @@ public class TestplusSysLog {
 ////        sysLogService.replaceUpdate(log);
 //        sysLogService.updateById(log);
 //        sysLogService.save(log);
-        List<SysLog> list = sysLogService.list();
-        System.out.println("查询结果：" + JSONUtil.toJsonStr(list));
+//        List<SysLog> list = sysLogService.list();
+//        System.out.println("查询结果：" + JSONUtil.toJsonStr(list));
+//
+//        logger.info(JSONUtil.toJsonStr(list));
+        IPage page = new Page(1, 1);
+        page = sysLogService.page(page);
+        System.out.println("查询结果：" + JSONUtil.toJsonStr(page));
 
-        logger.info(JSONUtil.toJsonStr(list));
     }
 }

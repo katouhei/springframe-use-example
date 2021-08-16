@@ -55,7 +55,7 @@ public class DataSourceAspect {
      */
     private Boolean isSlave(String methodName) {
         // 方法名以query、find、get开头的方法名走从库
-        return StrUtil.startWithAny(methodName, "query", "find", "select", "get", "list");
+        return StrUtil.startWithAny(methodName, "query", "find", "select", "get", "list", "page");
     }
 
 }
