@@ -3,12 +3,16 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/demo-spring-data/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-spring-data/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-spring-mvc-knife4j/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-spring-mvc-knife4j/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-spring-mvc/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-spring-mvc/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-spring-mybatis/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-spring-mybatis/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-spring-mybatisplus/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-spring-mybatisplus/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-spring-swagger/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-spring-swagger/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>

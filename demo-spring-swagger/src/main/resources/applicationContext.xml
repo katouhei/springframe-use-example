@@ -7,9 +7,7 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <import resource="spring-mybatis-plus.xml"/>
+    <import resource="spring-mybatis.xml"/>
     <import resource="spring-pkgenerate-redis.xml"/>
     <import resource="spring-standalone-redis.xml"/>
-    <!--开启组件包扫描，初始化系统异常统一处理对象-->
-    <context:component-scan base-package="com.jx.nc.filter"/>
 </beans>

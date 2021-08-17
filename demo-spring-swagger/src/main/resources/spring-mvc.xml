@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!--针对spring mvc项目中启动后在配置文件中加入如下内容，切点才有作用-->
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
+    <!--开启组件包扫描-->
+    <context:component-scan base-package="com.jx.nc">
+        <!--配置只扫描  @Controller注解   include包含的意思 (也可以配置全局扫描,但是最好用什么就扫描什么)-->
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+    <!--web异常统一处理类-->
+    <bean class="com.jx.nc.filter.ControllerExceptionResolver"/>
+    <!-- Spring MVC不处理静态资源 -->
+    <mvc:default-servlet-handler/>
+
+    <!-- 支持mvc注解驱动 -->
+    <!--注解驱动 -->
+    <mvc:annotation-driven>
+        <mvc:message-converters>
+            <ref bean="stringHttpMessageConverter"/>
+            <ref bean="mappingJackson2HttpMessageConverter"/>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+
+    <bean id="stringHttpMessageConverter" class="org.springframework.http.converter.StringHttpMessageConverter"/>
+
+    <!--解决IE浏览器json文件下载和json数据中乱码的问题-->
+    <bean id="mappingJackson2HttpMessageConverter"
+          class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+        <property name="supportedMediaTypes">
+            <list>
+                <value>text/html;charset=UTF-8</value>
+                <value>application/json;charset=UTF-8</value>
+            </list>
+        </property>
+    </bean>
+
+    <!--注册视图解析器-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <!--前缀-->
+        <property name="prefix" value="/WEB-INF/pages/"></property>
+        <!--后缀-->
+        <property name="suffix" value=".jsp"></property>
+    </bean>
+    <!-- swagger静态资源访问配置 -->
+    <mvc:resources mapping="swagger-ui.html" location="classpath:/META-INF/resources/" />
+    <mvc:resources mapping="/webjars/**" location="classpath:/META-INF/resources/webjars/" />
+
+
+</beans>

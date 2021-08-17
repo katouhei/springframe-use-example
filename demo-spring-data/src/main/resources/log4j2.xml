@@ -33,6 +33,7 @@
 
     <Loggers>
         <logger name="org.apache.commons.beanutils" level="INFO"></logger>
+        <logger name="org.springframework.data.redis.core" level="INFO"></logger>
         <Root level="DEBUG">
             <AppenderRef ref="Console"/>
             <AppenderRef ref="rolling_file"/>
