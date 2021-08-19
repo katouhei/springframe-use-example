@@ -1,6 +1,5 @@
-package com.jx.nc.pkgenerate.redis;
+package com.jx.nc.redis;
 
-import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.util.NumberUtil;
 import cn.hutool.core.util.StrUtil;
 import org.slf4j.Logger;
@@ -12,7 +11,6 @@ import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -184,6 +182,14 @@ public class StandaloneRedisService {
         }
         StringBuffer sb = new StringBuffer(prefix == null ? "" : prefix).append(LocalDateTime.now().format(FORMATTER)).append(StrUtil.padPre(String.valueOf(seq), 7, "0"));
         return sb.toString();
+    }
+
+    /**
+     * 消息队列用，新增内容入队列
+     * @param content
+     */
+    public void convertAndSend(Object content) {
+        redisTemplate.convertAndSend("queueTask", content);
     }
 
     public RedisTemplate<String, String> getRedisTemplate() {

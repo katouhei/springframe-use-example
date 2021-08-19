@@ -2,12 +2,13 @@ package com.jx.nc.system.controller;
 
 
 import cn.hutool.json.JSONUtil;
-import com.jx.nc.pkgenerate.redis.StandaloneRedisService;
+import com.jx.nc.redis.StandaloneRedisService;
 import com.jx.nc.system.bean.SysLog;
 import com.jx.nc.system.service.SysLogService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -71,5 +72,27 @@ public class SysLogController {
         logger.info("查询结果：" + result);
         return result;
 
+    }
+
+    @RequestMapping("/syslog/getex")
+    @ResponseBody
+    public String getex(int i) throws Exception {
+        int j =6;
+        logger.info(String.valueOf(j/i));
+        List<SysLog> list = sysLogService.select(new HashMap());
+        String result = JSONUtil.toJsonStr(list);
+        logger.info("查询结果：" + result);
+        return result;
+
+    }
+
+    @RequestMapping("/syslog/sendmsg")
+    @ResponseBody
+    public String sendmsg() throws Exception {
+        SysLog log = sysLogService.getById("LOG202108120000007");
+        standaloneRedisService.convertAndSend(log);
+        Map resultMap = new HashMap<>();
+        resultMap.put("msg", LocalDateTime.now().format(FORMATTER) + "发送了信息");
+        return JSONUtil.toJsonStr(resultMap);
     }
 }

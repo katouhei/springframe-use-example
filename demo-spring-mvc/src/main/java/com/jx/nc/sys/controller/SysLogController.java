@@ -2,7 +2,7 @@ package com.jx.nc.sys.controller;
 
 
 import cn.hutool.json.JSONUtil;
-import com.jx.nc.pkgenerate.redis.StandaloneRedisService;
+import com.jx.nc.redis.StandaloneRedisService;
 import com.jx.nc.sys.entity.SysLog;
 import com.jx.nc.sys.service.ISysLogService;
 import org.slf4j.Logger;

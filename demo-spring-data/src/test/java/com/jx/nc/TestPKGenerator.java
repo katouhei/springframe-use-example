@@ -14,7 +14,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 @RunWith(SpringRunner.class)
-@ContextConfiguration(locations = {"classpath:spring-standalone-redis.xml", "classpath:spring-pkgenerate-redis.xml"})
+@ContextConfiguration(locations = {"classpath:spring-single-redis.xml", "classpath:spring-pkgenerate-redis.xml"})
 public class TestPKGenerator {
 
     @Autowired

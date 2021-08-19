@@ -9,5 +9,6 @@
 
     <import resource="spring-mybatis.xml"/>
     <import resource="spring-pkgenerate-redis.xml"/>
-    <import resource="spring-standalone-redis.xml"/>
+    <import resource="spring-single-redis.xml"/>
+    <import resource="spring-redis-queue.xml"/>
 </beans>

@@ -1,7 +1,7 @@
 package com.jx.nc;
 
 import cn.hutool.core.date.DateUtil;
-import com.jx.nc.pkgenerate.redis.StandaloneRedisService;
+import com.jx.nc.redis.StandaloneRedisService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

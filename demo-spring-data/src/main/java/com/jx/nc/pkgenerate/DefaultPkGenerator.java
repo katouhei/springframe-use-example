@@ -1,7 +1,7 @@
 package com.jx.nc.pkgenerate;
 
 import cn.hutool.core.util.StrUtil;
-import com.jx.nc.pkgenerate.redis.StandaloneRedisService;
+import com.jx.nc.redis.StandaloneRedisService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +10,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
+
 
 public class DefaultPkGenerator extends DefaultPkGeneratorConfig implements PkGenerator, Runnable {
 

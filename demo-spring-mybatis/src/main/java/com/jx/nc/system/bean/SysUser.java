@@ -1,12 +1,14 @@
 package com.jx.nc.system.bean;
 
+import java.io.Serializable;
+
 /**
  * 用户信息
  * 类名:SysUser
  * 创建人:katouhei
  * 创建时间:20210810
  */
-public class SysUser {
+public class SysUser implements Serializable {
 
     
     /**

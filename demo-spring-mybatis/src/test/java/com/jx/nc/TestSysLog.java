@@ -1,7 +1,7 @@
 package com.jx.nc;
 
 import cn.hutool.json.JSONUtil;
-import com.jx.nc.pkgenerate.redis.StandaloneRedisService;
+import com.jx.nc.redis.StandaloneRedisService;
 import com.jx.nc.system.bean.SysLog;
 import com.jx.nc.system.service.SysLogService;
 import org.junit.Test;
@@ -13,7 +13,6 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.List;

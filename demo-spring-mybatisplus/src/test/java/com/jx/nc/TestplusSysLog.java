@@ -3,8 +3,7 @@ package com.jx.nc;
 import cn.hutool.json.JSONUtil;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.jx.nc.pkgenerate.redis.StandaloneRedisService;
-import com.jx.nc.sys.entity.SysLog;
+import com.jx.nc.redis.StandaloneRedisService;
 import com.jx.nc.sys.service.ISysLogService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -14,9 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.List;
 
 
 @RunWith(SpringRunner.class)

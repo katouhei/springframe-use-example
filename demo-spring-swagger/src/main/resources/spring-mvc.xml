@@ -21,8 +21,6 @@
         <!--配置只扫描  @Controller注解   include包含的意思 (也可以配置全局扫描,但是最好用什么就扫描什么)-->
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
-    <!--web异常统一处理类-->
-    <bean class="com.jx.nc.filter.ControllerExceptionResolver"/>
     <!-- Spring MVC不处理静态资源 -->
     <mvc:default-servlet-handler/>
 
@@ -44,6 +42,8 @@
             <list>
                 <value>text/html;charset=UTF-8</value>
                 <value>application/json;charset=UTF-8</value>
+                <value>text/plain;charset=UTF-8</value>
+                <value>*/*;charset=UTF-8</value>
             </list>
         </property>
     </bean>

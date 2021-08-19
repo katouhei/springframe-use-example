@@ -21,7 +21,7 @@ public class SwaggerConfiguration {
                 .apiInfo(groupApiInfo())
                 .groupName("默认接口")
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.xiaominfo.knife4j.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.jx.nc.controller"))
                 //.apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))
                 .paths(PathSelectors.any())
                 .build();
