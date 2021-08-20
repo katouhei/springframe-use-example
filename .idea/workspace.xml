@@ -18,6 +18,11 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:gitee" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
@@ -31,9 +36,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7fc8a8e-e4e7-4f09-86d4-fce274d4c7e5" name="Default Changelist" comment="加入spring-data-redis相关依赖">
-      <change afterPath="$PROJECT_DIR$/demo-spring-mvc-knife4j/src/main/java/com/jx/nc/controller/Api204Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo-spring-mvc-swagger/src/main/java/com/jx/nc/busexcep/CustomBusException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo-spring-mvc-swagger/src/main/java/com/jx/nc/webconfig/ReqWebMvcConfigurer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-spring-mvc-swagger/src/main/java/com/jx/nc/advice/SwaggerGlobalHandle.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mvc-swagger/src/main/java/com/jx/nc/advice/SwaggerGlobalHandle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-spring-mvc-swagger/src/main/java/com/jx/nc/system/controller/SysLogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mvc-swagger/src/main/java/com/jx/nc/system/controller/SysLogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-spring-mvc-swagger/src/main/java/com/jx/nc/webconfig/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mvc-swagger/src/main/java/com/jx/nc/webconfig/SwaggerConfig.java" afterDir="false" />
     </list>
     <list id="a1f727a9-1073-4cf7-806e-a94f3d6b3f26" name="Uncommitted changes before Update at 2021/8/13 15:09 [Default Changelist]" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -470,7 +478,7 @@
       <workItem from="1629247534478" duration="3889000" />
       <workItem from="1629332993467" duration="20071000" />
       <workItem from="1629361896459" duration="4980000" />
-      <workItem from="1629419117640" duration="1446000" />
+      <workItem from="1629419117640" duration="10716000" />
     </task>
     <task id="LOCAL-00001" summary="spring框架使用redis、mybatis等">
       <created>1628676165266</created>
@@ -528,7 +536,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629367176068</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="调整模块的名称">
+      <created>1629421760073</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1629421760073</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -567,7 +582,8 @@
     <MESSAGE value="加入swagger框架自动生成接口文档示例" />
     <MESSAGE value="加入knife4j框架自动生成接口文档示例" />
     <MESSAGE value="新增spring+redis实现消息队列、完善redis单机模式下线程池的配置等" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增spring+redis实现消息队列、完善redis单机模式下线程池的配置等" />
+    <MESSAGE value="调整模块的名称" />
+    <option name="LAST_COMMIT_MESSAGE" value="调整模块的名称" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1152" y="595" key="#Custom_Plugin_Repositories" timestamp="1629186917860">
@@ -698,10 +714,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="781" y="344" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1629336173429" />
-    <state x="872" y="432" key="Vcs.Push.Dialog.v2" timestamp="1629420084083">
+    <state x="872" y="432" key="Vcs.Push.Dialog.v2" timestamp="1629421856177">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="872" y="432" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1629420084083" />
+    <state x="872" y="432" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1629421856177" />
     <state x="1074" y="612" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1629092289189">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -718,10 +734,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="654" y="360" key="new project wizard/0.0.2560.1400@0.0.2560.1400" timestamp="1629190850559" />
-    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1629360651177">
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1629444216019">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1629360651177" />
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1629444216019" />
     <state x="1074" y="596" key="svn.passwordDialog" timestamp="1628838970326">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

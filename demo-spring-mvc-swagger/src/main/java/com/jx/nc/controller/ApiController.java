@@ -1,7 +1,12 @@
 package com.jx.nc.controller;
 
 import cn.hutool.core.util.RandomUtil;
+import cn.hutool.crypto.KeyUtil;
 import cn.hutool.json.JSONUtil;
+import cn.hutool.jwt.JWT;
+import cn.hutool.jwt.signers.AlgorithmUtil;
+import cn.hutool.jwt.signers.JWTSigner;
+import cn.hutool.jwt.signers.JWTSignerUtil;
 import com.jx.nc.redis.StandaloneRedisService;
 import com.jx.nc.system.bean.SysLog;
 import com.jx.nc.system.bean.SysUser;
@@ -74,5 +79,27 @@ public class ApiController {
     public String test() throws Exception {
 
         return RandomUtil.randomString(32);
+    }
+
+    @PostMapping("/login.api")
+    @ApiOperation("测试登录并生成token")
+    @ResponseBody
+    public String login() throws Exception {
+        // 密钥
+        byte[] key = "1234567890".getBytes();
+        // SHA256withRSA
+        String id = "rs256";
+        JWTSigner signer = JWTSignerUtil.createSigner(id,
+                // 随机生成密钥对，此处用户可自行读取`KeyPair`、公钥或私钥生成`JWTSigner`
+                KeyUtil.generateKeyPair(AlgorithmUtil.getAlgorithm(id)));
+
+        String token = JWT.create()
+                .setPayload("sub", "1234567890")
+                .setPayload("name", "looly")
+                .setPayload("admin", true)
+                .setKey(key)
+                .setSigner(signer)
+                .sign();
+        return token;
     }
 }

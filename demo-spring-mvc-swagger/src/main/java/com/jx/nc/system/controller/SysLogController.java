@@ -2,6 +2,7 @@ package com.jx.nc.system.controller;
 
 
 import cn.hutool.json.JSONUtil;
+import com.jx.nc.busexcep.CustomBusException;
 import com.jx.nc.redis.StandaloneRedisService;
 import com.jx.nc.system.bean.SysLog;
 import com.jx.nc.system.service.SysLogService;
@@ -76,9 +77,12 @@ public class SysLogController {
 
     @RequestMapping("/syslog/getex")
     @ResponseBody
-    public String getex(int i) throws Exception {
+    public String getex(Integer i) throws Exception {
         int j =6;
-        logger.info(String.valueOf(j/i));
+        if(i == null || i == 0) {
+            throw new CustomBusException("传入的参数有误");
+        }
+        logger.info(String.valueOf(j / i));
         List<SysLog> list = sysLogService.select(new HashMap());
         String result = JSONUtil.toJsonStr(list);
         logger.info("查询结果：" + result);

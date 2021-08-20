@@ -17,7 +17,6 @@ public class SwaggerConfig {
     @Bean
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
-
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.jx.nc.controller"))  //显示所有类
                 .apis(RequestHandlerSelectors.withClassAnnotation(Api.class))  //只显示添加@Api注解的类
