@@ -31,33 +31,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7fc8a8e-e4e7-4f09-86d4-fce274d4c7e5" name="Default Changelist" comment="加入spring-data-redis相关依赖">
-      <change afterPath="$PROJECT_DIR$/demo-spring-data/src/main/java/com/jx/nc/redis/queue/ListenRedisQueueTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-spring-data/src/main/resources/spring-redis-queue.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-spring-data/src/main/resources/spring-thread-pool.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-spring-data/src/test/java/com/jx/nc/TestThreadPool.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/demo-spring-mvc-knife4j/src/main/java/com/jx/nc/controller/Api204Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-spring-swagger/src/main/java/com/jx/nc/advice/SwaggerGlobalHandle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-data/src/main/java/com/jx/nc/pkgenerate/DefaultPkGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-data/src/main/java/com/jx/nc/pkgenerate/DefaultPkGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-data/src/main/java/com/jx/nc/pkgenerate/redis/StandaloneRedisService.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-data/src/main/java/com/jx/nc/redis/StandaloneRedisService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-data/src/main/resources/spring-pkgenerate-redis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-data/src/main/resources/spring-pkgenerate-redis.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-data/src/main/resources/spring-single-redis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-data/src/main/resources/spring-single-redis.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-data/src/test/java/com/jx/nc/JedisSamples.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-data/src/test/java/com/jx/nc/JedisSamples.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-data/src/test/java/com/jx/nc/TestPKGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-data/src/test/java/com/jx/nc/TestPKGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-data/src/test/java/com/jx/nc/TestStandaloneUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-data/src/test/java/com/jx/nc/TestStandaloneUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-mvc-knife4j/src/main/java/com/jx/nc/webconfig/SwaggerConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mvc-knife4j/src/main/java/com/jx/nc/webconfig/SwaggerConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-mvc/src/main/java/com/jx/nc/sys/controller/SysLogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mvc/src/main/java/com/jx/nc/sys/controller/SysLogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-mybatis/src/main/java/com/jx/nc/system/bean/SysUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mybatis/src/main/java/com/jx/nc/system/bean/SysUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-mybatis/src/test/java/com/jx/nc/TestSysLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mybatis/src/test/java/com/jx/nc/TestSysLog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-mybatis/src/test/java/com/jx/nc/TestSysUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mybatis/src/test/java/com/jx/nc/TestSysUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-mybatisplus/src/test/java/com/jx/nc/TestplusSysLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mybatisplus/src/test/java/com/jx/nc/TestplusSysLog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-swagger/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-swagger/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-swagger/src/main/java/com/jx/nc/controller/ApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-swagger/src/main/java/com/jx/nc/controller/ApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-swagger/src/main/java/com/jx/nc/system/controller/SysLogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-swagger/src/main/java/com/jx/nc/system/controller/SysLogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-swagger/src/main/java/com/jx/nc/webconfig/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-swagger/src/main/java/com/jx/nc/webconfig/SwaggerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-swagger/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-swagger/src/main/resources/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-swagger/src/main/resources/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-swagger/src/main/resources/spring-mvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <list id="a1f727a9-1073-4cf7-806e-a94f3d6b3f26" name="Uncommitted changes before Update at 2021/8/13 15:09 [Default Changelist]" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -128,7 +104,7 @@
       <recent name="D:\workspace\other\springframe-use\demo-spring-data\src\main\java\com\jx\nc" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestThreadPool.test1">
+  <component name="RunManager" selected="Tomcat Server.springswagger">
     <configuration name="JedisSamples.queueTask" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo-spring-data" />
       <extension name="coverage">
@@ -457,11 +433,11 @@
       <item itemvalue="JUnit.TestplusSysLog.test1" />
       <item itemvalue="JUnit.TestSysLog.test1" />
       <item itemvalue="JUnit.JedisSamples.queueTask" />
+      <item itemvalue="JUnit.TestPKGenerator.test2" />
+      <item itemvalue="JUnit.TestThreadPool.test1" />
       <item itemvalue="Tomcat Server.demoknife4j" />
       <item itemvalue="Tomcat Server.demospring" />
       <item itemvalue="Tomcat Server.springswagger" />
-      <item itemvalue="JUnit.TestPKGenerator.test2" />
-      <item itemvalue="JUnit.TestThreadPool.test1" />
     </list>
     <recent_temporary>
       <list>
@@ -493,7 +469,8 @@
       <workItem from="1629188007667" duration="6194000" />
       <workItem from="1629247534478" duration="3889000" />
       <workItem from="1629332993467" duration="20071000" />
-      <workItem from="1629361896459" duration="3995000" />
+      <workItem from="1629361896459" duration="4980000" />
+      <workItem from="1629419117640" duration="1446000" />
     </task>
     <task id="LOCAL-00001" summary="spring框架使用redis、mybatis等">
       <created>1628676165266</created>
@@ -544,7 +521,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629192493353</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="新增spring+redis实现消息队列、完善redis单机模式下线程池的配置等">
+      <created>1629367176068</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1629367176068</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -582,7 +566,8 @@
     <MESSAGE value="完善优化读写分离的过滤条件、druid数据监控的过滤；" />
     <MESSAGE value="加入swagger框架自动生成接口文档示例" />
     <MESSAGE value="加入knife4j框架自动生成接口文档示例" />
-    <option name="LAST_COMMIT_MESSAGE" value="加入knife4j框架自动生成接口文档示例" />
+    <MESSAGE value="新增spring+redis实现消息队列、完善redis单机模式下线程池的配置等" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增spring+redis实现消息队列、完善redis单机模式下线程池的配置等" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1152" y="595" key="#Custom_Plugin_Repositories" timestamp="1629186917860">
@@ -625,70 +610,78 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1060" y="440" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1629339556947" />
-    <state width="2291" height="351" key="GridCell.Tab.0.bottom" timestamp="1629366250561">
+    <state x="1073" y="579" key="Gitee.ShareDialog" timestamp="1629419288792">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2291" height="351" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1629366250561" />
-    <state width="2291" height="351" key="GridCell.Tab.0.center" timestamp="1629366250560">
+    <state x="1073" y="579" key="Gitee.ShareDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1629419288792" />
+    <state width="2291" height="351" key="GridCell.Tab.0.bottom" timestamp="1629367733224">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2291" height="351" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1629366250560" />
-    <state width="2291" height="351" key="GridCell.Tab.0.left" timestamp="1629366250560">
+    <state width="2291" height="351" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1629367733224" />
+    <state width="2291" height="351" key="GridCell.Tab.0.center" timestamp="1629367733223">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2291" height="351" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1629366250560" />
-    <state width="2291" height="351" key="GridCell.Tab.0.right" timestamp="1629366250561">
+    <state width="2291" height="351" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1629367733223" />
+    <state width="2291" height="351" key="GridCell.Tab.0.left" timestamp="1629367733223">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2291" height="351" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1629366250561" />
-    <state width="2291" height="351" key="GridCell.Tab.1.bottom" timestamp="1629366250561">
+    <state width="2291" height="351" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1629367733223" />
+    <state width="2291" height="351" key="GridCell.Tab.0.right" timestamp="1629367733223">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2291" height="351" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1629366250561" />
-    <state width="2291" height="351" key="GridCell.Tab.1.center" timestamp="1629366250561">
+    <state width="2291" height="351" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1629367733223" />
+    <state width="2291" height="351" key="GridCell.Tab.1.bottom" timestamp="1629367733224">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2291" height="351" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1629366250561" />
-    <state width="2291" height="351" key="GridCell.Tab.1.left" timestamp="1629366250561">
+    <state width="2291" height="351" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1629367733224" />
+    <state width="2291" height="351" key="GridCell.Tab.1.center" timestamp="1629367733224">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2291" height="351" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1629366250561" />
-    <state width="2291" height="351" key="GridCell.Tab.1.right" timestamp="1629366250561">
+    <state width="2291" height="351" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1629367733224" />
+    <state width="2291" height="351" key="GridCell.Tab.1.left" timestamp="1629367733224">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2291" height="351" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1629366250561" />
-    <state width="2291" height="351" key="GridCell.Tab.2.bottom" timestamp="1629366250561">
+    <state width="2291" height="351" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1629367733224" />
+    <state width="2291" height="351" key="GridCell.Tab.1.right" timestamp="1629367733224">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2291" height="351" key="GridCell.Tab.2.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1629366250561" />
-    <state width="2291" height="351" key="GridCell.Tab.2.center" timestamp="1629366250561">
+    <state width="2291" height="351" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1629367733224" />
+    <state width="2291" height="351" key="GridCell.Tab.2.bottom" timestamp="1629367733224">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2291" height="351" key="GridCell.Tab.2.center/0.0.2560.1400@0.0.2560.1400" timestamp="1629366250561" />
-    <state width="2291" height="351" key="GridCell.Tab.2.left" timestamp="1629366250561">
+    <state width="2291" height="351" key="GridCell.Tab.2.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1629367733224" />
+    <state width="2291" height="351" key="GridCell.Tab.2.center" timestamp="1629367733224">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2291" height="351" key="GridCell.Tab.2.left/0.0.2560.1400@0.0.2560.1400" timestamp="1629366250561" />
-    <state width="2291" height="351" key="GridCell.Tab.2.right" timestamp="1629366250561">
+    <state width="2291" height="351" key="GridCell.Tab.2.center/0.0.2560.1400@0.0.2560.1400" timestamp="1629367733224" />
+    <state width="2291" height="351" key="GridCell.Tab.2.left" timestamp="1629367733224">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2291" height="351" key="GridCell.Tab.2.right/0.0.2560.1400@0.0.2560.1400" timestamp="1629366250561" />
-    <state width="2291" height="351" key="GridCell.Tab.3.bottom" timestamp="1629366250561">
+    <state width="2291" height="351" key="GridCell.Tab.2.left/0.0.2560.1400@0.0.2560.1400" timestamp="1629367733224" />
+    <state width="2291" height="351" key="GridCell.Tab.2.right" timestamp="1629367733224">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2291" height="351" key="GridCell.Tab.3.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1629366250561" />
-    <state width="2291" height="351" key="GridCell.Tab.3.center" timestamp="1629366250561">
+    <state width="2291" height="351" key="GridCell.Tab.2.right/0.0.2560.1400@0.0.2560.1400" timestamp="1629367733224" />
+    <state width="2291" height="351" key="GridCell.Tab.3.bottom" timestamp="1629367733224">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2291" height="351" key="GridCell.Tab.3.center/0.0.2560.1400@0.0.2560.1400" timestamp="1629366250561" />
-    <state width="2291" height="351" key="GridCell.Tab.3.left" timestamp="1629366250561">
+    <state width="2291" height="351" key="GridCell.Tab.3.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1629367733224" />
+    <state width="2291" height="351" key="GridCell.Tab.3.center" timestamp="1629367733224">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2291" height="351" key="GridCell.Tab.3.left/0.0.2560.1400@0.0.2560.1400" timestamp="1629366250561" />
-    <state width="2291" height="351" key="GridCell.Tab.3.right" timestamp="1629366250561">
+    <state width="2291" height="351" key="GridCell.Tab.3.center/0.0.2560.1400@0.0.2560.1400" timestamp="1629367733224" />
+    <state width="2291" height="351" key="GridCell.Tab.3.left" timestamp="1629367733224">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2291" height="351" key="GridCell.Tab.3.right/0.0.2560.1400@0.0.2560.1400" timestamp="1629366250561" />
+    <state width="2291" height="351" key="GridCell.Tab.3.left/0.0.2560.1400@0.0.2560.1400" timestamp="1629367733224" />
+    <state width="2291" height="351" key="GridCell.Tab.3.right" timestamp="1629367733224">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2291" height="351" key="GridCell.Tab.3.right/0.0.2560.1400@0.0.2560.1400" timestamp="1629367733224" />
+    <state x="860" y="434" key="IDE.errors.dialog" timestamp="1629419356183">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="860" y="434" key="IDE.errors.dialog/0.0.2560.1400@0.0.2560.1400" timestamp="1629419356183" />
     <state x="810" y="354" key="Maven.ArtifactSearchDialog" timestamp="1629181571424">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -705,10 +698,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="781" y="344" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1629336173429" />
-    <state x="872" y="432" key="Vcs.Push.Dialog.v2" timestamp="1629192697022">
+    <state x="872" y="432" key="Vcs.Push.Dialog.v2" timestamp="1629420084083">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="872" y="432" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1629192697022" />
+    <state x="872" y="432" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1629420084083" />
     <state x="1074" y="612" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1629092289189">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -717,6 +710,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="981" y="403" width="598" height="594" key="find.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1629184487767" />
+    <state x="720" y="522" width="636" height="245" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1629367523586">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="720" y="522" width="636" height="245" key="git4idea.remote.GitConfigureRemotesDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1629367523586" />
     <state x="654" y="360" key="new project wizard" timestamp="1629190850559">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
