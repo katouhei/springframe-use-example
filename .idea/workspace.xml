@@ -36,30 +36,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7fc8a8e-e4e7-4f09-86d4-fce274d4c7e5" name="Default Changelist" comment="加入spring-data-redis相关依赖">
-      <change afterPath="$PROJECT_DIR$/demo-spring-data/src/main/java/com/jx/nc/Contants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-spring-mvc-swagger/src/main/java/com/jx/nc/filter/CustomObjectMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-spring-mvc-swagger/src/main/java/com/jx/nc/filter/LocalDateTimeConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-spring-mvc-swagger/src/test/java/com/jx/nc/WebTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo-spring-mvc-swagger/src/test/java/com/jx/nc/nio/A.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-data/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-data/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-mvc-knife4j/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mvc-knife4j/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-mvc-swagger/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mvc-swagger/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-mvc-swagger/src/main/java/com/jx/nc/advice/AppRequestBodyAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mvc-swagger/src/main/java/com/jx/nc/advice/AppRequestBodyAdvice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-mvc-swagger/src/main/java/com/jx/nc/advice/AppResponseBodyAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mvc-swagger/src/main/java/com/jx/nc/advice/AppResponseBodyAdvice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-mvc-swagger/src/main/java/com/jx/nc/advice/SwaggerGlobalHandle.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mvc-swagger/src/main/java/com/jx/nc/advice/SwaggerGlobalHandle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-mvc-swagger/src/main/java/com/jx/nc/busexcep/CustomBusException.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mvc-swagger/src/main/java/com/jx/nc/busexcep/CustomBusException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-mvc-swagger/src/main/java/com/jx/nc/controller/ApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mvc-swagger/src/main/java/com/jx/nc/controller/ApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-mvc-swagger/src/main/java/com/jx/nc/system/controller/SysLogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mvc-swagger/src/main/java/com/jx/nc/system/controller/SysLogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-mvc-swagger/src/main/java/com/jx/nc/webconfig/ReqWebMvcConfigurer.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mvc-swagger/src/main/java/com/jx/nc/webconfig/ReqWebMvcConfigurer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-mvc-swagger/src/main/java/com/jx/nc/webconfig/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mvc-swagger/src/main/java/com/jx/nc/webconfig/SwaggerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-mvc-swagger/src/main/resources/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mvc-swagger/src/main/resources/spring-mvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-mvc/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mvc/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-mybatis/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mybatis/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-mybatis/src/main/java/com/jx/nc/system/bean/SysLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mybatis/src/main/java/com/jx/nc/system/bean/SysLog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-mybatis/src/main/resources/spring-mybatis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mybatis/src/main/resources/spring-mybatis.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-spring-mybatisplus/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-spring-mybatisplus/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo-springframe/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo-springframe/src/main/java/com/jx/nc/BeanFactoryPostProcessorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo-springframe/src/main/java/com/jx/nc/HelloWorld.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo-springframe/src/main/java/com/jx/nc/InitBeanPostProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo-springframe/src/main/java/com/jx/nc/InstanceBeanPostProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo-springframe/src/main/java/com/jx/nc/SpringTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo-springframe/src/main/resources/appcontext-service.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <list id="a1f727a9-1073-4cf7-806e-a94f3d6b3f26" name="Uncommitted changes before Update at 2021/8/13 15:09 [Default Changelist]" comment="" />
@@ -133,13 +116,26 @@
       <recent name="D:\workspace\other\springframe-use\demo-spring-data\src\main\resources\config" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.springswagger">
+  <component name="RunManager" selected="Application.SpringTest">
     <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.jx.nc.nio.Server" />
       <module name="demo-spring-mvc-swagger" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.jx.nc.nio.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jx.nc.SpringTest" />
+      <module name="demo-springframe" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jx.nc.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -173,22 +169,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.jx.nc" />
       <option name="MAIN_CLASS_NAME" value="com.jx.nc.TestSysLog" />
-      <option name="METHOD_NAME" value="test1" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestThreadPool.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="demo-spring-data" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jx.nc.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.jx.nc" />
-      <option name="MAIN_CLASS_NAME" value="com.jx.nc.TestThreadPool" />
       <option name="METHOD_NAME" value="test1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -441,21 +421,21 @@
     </configuration>
     <list>
       <item itemvalue="Application.Server" />
-      <item itemvalue="JUnit.TestThreadPool.test1" />
       <item itemvalue="JUnit.A.crate" />
       <item itemvalue="JUnit.TestSysLog.test1" />
       <item itemvalue="JUnit.WebTest.testGoList" />
       <item itemvalue="Tomcat Server.demoknife4j" />
       <item itemvalue="Tomcat Server.demospring" />
       <item itemvalue="Tomcat Server.springswagger" />
+      <item itemvalue="Application.SpringTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SpringTest" />
         <item itemvalue="JUnit.WebTest.testGoList" />
         <item itemvalue="JUnit.TestSysLog.test1" />
         <item itemvalue="JUnit.A.crate" />
         <item itemvalue="Application.Server" />
-        <item itemvalue="JUnit.TestThreadPool.test1" />
       </list>
     </recent_temporary>
   </component>
@@ -484,7 +464,7 @@
       <workItem from="1629680820854" duration="25901000" />
       <workItem from="1629764779158" duration="13963000" />
       <workItem from="1629785241612" duration="6223000" />
-      <workItem from="1629851833340" duration="21915000" />
+      <workItem from="1629851833340" duration="24795000" />
     </task>
     <task id="LOCAL-00001" summary="spring框架使用redis、mybatis等">
       <created>1628676165266</created>
@@ -556,7 +536,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629452882840</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="完善localdatetime json格式化、jwt认证、优化代码等">
+      <created>1629880908778</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1629880908778</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -597,7 +584,8 @@
     <MESSAGE value="新增spring+redis实现消息队列、完善redis单机模式下线程池的配置等" />
     <MESSAGE value="调整模块的名称" />
     <MESSAGE value="针对对外提供的接口加入跨域处理、鉴权处理、解密处理等功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="针对对外提供的接口加入跨域处理、鉴权处理、解密处理等功能" />
+    <MESSAGE value="完善localdatetime json格式化、jwt认证、优化代码等" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善localdatetime json格式化、jwt认证、优化代码等" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1152" y="595" key="#Custom_Plugin_Repositories" timestamp="1629186917860">
@@ -656,70 +644,70 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1073" y="579" key="Gitee.ShareDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1629419288792" />
-    <state width="2117" height="466" key="GridCell.Tab.0.bottom" timestamp="1629879686469">
+    <state width="2117" height="466" key="GridCell.Tab.0.bottom" timestamp="1629880000435">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2117" height="466" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1629879686469" />
-    <state width="2117" height="466" key="GridCell.Tab.0.center" timestamp="1629879686469">
+    <state width="2117" height="466" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1629880000435" />
+    <state width="2117" height="466" key="GridCell.Tab.0.center" timestamp="1629880000435">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2117" height="466" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1629879686469" />
-    <state width="2117" height="466" key="GridCell.Tab.0.left" timestamp="1629879686469">
+    <state width="2117" height="466" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1629880000435" />
+    <state width="2117" height="466" key="GridCell.Tab.0.left" timestamp="1629880000435">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2117" height="466" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1629879686469" />
-    <state width="2117" height="466" key="GridCell.Tab.0.right" timestamp="1629879686469">
+    <state width="2117" height="466" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1629880000435" />
+    <state width="2117" height="466" key="GridCell.Tab.0.right" timestamp="1629880000435">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2117" height="466" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1629879686469" />
-    <state width="2117" height="466" key="GridCell.Tab.1.bottom" timestamp="1629879709461">
+    <state width="2117" height="466" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1629880000435" />
+    <state width="2117" height="466" key="GridCell.Tab.1.bottom" timestamp="1629880000435">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2117" height="466" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1629879709461" />
-    <state width="2117" height="466" key="GridCell.Tab.1.center" timestamp="1629879709460">
+    <state width="2117" height="466" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1629880000435" />
+    <state width="2117" height="466" key="GridCell.Tab.1.center" timestamp="1629880000435">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2117" height="466" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1629879709460" />
-    <state width="2117" height="466" key="GridCell.Tab.1.left" timestamp="1629879709460">
+    <state width="2117" height="466" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1629880000435" />
+    <state width="2117" height="466" key="GridCell.Tab.1.left" timestamp="1629880000435">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2117" height="466" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1629879709460" />
-    <state width="2117" height="466" key="GridCell.Tab.1.right" timestamp="1629879709460">
+    <state width="2117" height="466" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1629880000435" />
+    <state width="2117" height="466" key="GridCell.Tab.1.right" timestamp="1629880000435">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2117" height="466" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1629879709460" />
-    <state width="2117" height="466" key="GridCell.Tab.2.bottom" timestamp="1629879686314">
+    <state width="2117" height="466" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1629880000435" />
+    <state width="2117" height="466" key="GridCell.Tab.2.bottom" timestamp="1629880000435">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2117" height="466" key="GridCell.Tab.2.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1629879686314" />
-    <state width="2117" height="466" key="GridCell.Tab.2.center" timestamp="1629879686314">
+    <state width="2117" height="466" key="GridCell.Tab.2.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1629880000435" />
+    <state width="2117" height="466" key="GridCell.Tab.2.center" timestamp="1629880000435">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2117" height="466" key="GridCell.Tab.2.center/0.0.2560.1400@0.0.2560.1400" timestamp="1629879686314" />
-    <state width="2117" height="466" key="GridCell.Tab.2.left" timestamp="1629879686314">
+    <state width="2117" height="466" key="GridCell.Tab.2.center/0.0.2560.1400@0.0.2560.1400" timestamp="1629880000435" />
+    <state width="2117" height="466" key="GridCell.Tab.2.left" timestamp="1629880000435">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2117" height="466" key="GridCell.Tab.2.left/0.0.2560.1400@0.0.2560.1400" timestamp="1629879686314" />
-    <state width="2117" height="466" key="GridCell.Tab.2.right" timestamp="1629879686314">
+    <state width="2117" height="466" key="GridCell.Tab.2.left/0.0.2560.1400@0.0.2560.1400" timestamp="1629880000435" />
+    <state width="2117" height="466" key="GridCell.Tab.2.right" timestamp="1629880000435">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2117" height="466" key="GridCell.Tab.2.right/0.0.2560.1400@0.0.2560.1400" timestamp="1629879686314" />
-    <state width="2117" height="466" key="GridCell.Tab.3.bottom" timestamp="1629879686314">
+    <state width="2117" height="466" key="GridCell.Tab.2.right/0.0.2560.1400@0.0.2560.1400" timestamp="1629880000435" />
+    <state width="2117" height="466" key="GridCell.Tab.3.bottom" timestamp="1629880000435">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2117" height="466" key="GridCell.Tab.3.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1629879686314" />
-    <state width="2117" height="466" key="GridCell.Tab.3.center" timestamp="1629879686314">
+    <state width="2117" height="466" key="GridCell.Tab.3.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1629880000435" />
+    <state width="2117" height="466" key="GridCell.Tab.3.center" timestamp="1629880000435">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2117" height="466" key="GridCell.Tab.3.center/0.0.2560.1400@0.0.2560.1400" timestamp="1629879686314" />
-    <state width="2117" height="466" key="GridCell.Tab.3.left" timestamp="1629879686314">
+    <state width="2117" height="466" key="GridCell.Tab.3.center/0.0.2560.1400@0.0.2560.1400" timestamp="1629880000435" />
+    <state width="2117" height="466" key="GridCell.Tab.3.left" timestamp="1629880000435">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2117" height="466" key="GridCell.Tab.3.left/0.0.2560.1400@0.0.2560.1400" timestamp="1629879686314" />
-    <state width="2117" height="466" key="GridCell.Tab.3.right" timestamp="1629879686314">
+    <state width="2117" height="466" key="GridCell.Tab.3.left/0.0.2560.1400@0.0.2560.1400" timestamp="1629880000435" />
+    <state width="2117" height="466" key="GridCell.Tab.3.right" timestamp="1629880000435">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2117" height="466" key="GridCell.Tab.3.right/0.0.2560.1400@0.0.2560.1400" timestamp="1629879686314" />
+    <state width="2117" height="466" key="GridCell.Tab.3.right/0.0.2560.1400@0.0.2560.1400" timestamp="1629880000435" />
     <state x="860" y="434" key="IDE.errors.dialog" timestamp="1629419356183">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -740,10 +728,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="501" y="185" width="1711" height="995" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1629873979524" />
-    <state x="872" y="432" key="Vcs.Push.Dialog.v2" timestamp="1629452940097">
+    <state x="656" y="374" key="Vcs.Push.Dialog.v2" timestamp="1629880974050">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="872" y="432" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1629452940097" />
+    <state x="656" y="374" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1629880974050" />
     <state width="1288" height="708" key="XDebugger.FullValuePopup" timestamp="1629786392099">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -768,14 +756,14 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="720" y="522" width="636" height="245" key="git4idea.remote.GitConfigureRemotesDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1629367523586" />
-    <state x="654" y="360" key="new project wizard" timestamp="1629190850559">
+    <state x="654" y="360" key="new project wizard" timestamp="1629882949474">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="654" y="360" key="new project wizard/0.0.2560.1400@0.0.2560.1400" timestamp="1629190850559" />
-    <state x="623" y="122" width="1143" height="698" key="search.everywhere.popup" timestamp="1629877176806">
+    <state x="654" y="360" key="new project wizard/0.0.2560.1400@0.0.2560.1400" timestamp="1629882949474" />
+    <state x="623" y="122" width="1143" height="698" key="search.everywhere.popup" timestamp="1629882149831">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="623" y="122" width="1143" height="698" key="search.everywhere.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1629877176806" />
+    <state x="623" y="122" width="1143" height="698" key="search.everywhere.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1629882149831" />
     <state x="1074" y="596" key="svn.passwordDialog" timestamp="1628838970326">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -805,21 +793,6 @@
           <url>jar://$PROJECT_DIR$/../../../maven/repository/com/fasterxml/jackson/core/jackson-databind/2.12.3/jackson-databind-2.12.3.jar!/com/fasterxml/jackson/databind/module/SimpleModule.class</url>
           <line>64</line>
           <option name="timeStamp" value="52" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/demo-spring-mvc-swagger/src/main/java/com/jx/nc/advice/AppRequestBodyAdvice.java</url>
-          <line>92</line>
-          <option name="timeStamp" value="90" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/demo-spring-mvc-swagger/src/main/java/com/jx/nc/advice/AppRequestBodyAdvice.java</url>
-          <line>87</line>
-          <option name="timeStamp" value="91" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/demo-spring-mvc-swagger/src/main/java/com/jx/nc/advice/AppRequestBodyAdvice.java</url>
-          <line>57</line>
-          <option name="timeStamp" value="92" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
