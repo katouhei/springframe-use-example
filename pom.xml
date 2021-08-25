@@ -13,7 +13,7 @@
         <module>demo-spring-mvc</module>
         <module>demo-spring-mybatis</module>
         <module>demo-spring-mybatisplus</module>
-        <module>demo-spring-swagger</module>
+        <module>demo-spring-mvc-swagger</module>
         <module>demo-spring-mvc-knife4j</module>
     </modules>
     <properties>
@@ -25,17 +25,41 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <spring.version>5.3.9</spring.version>
-        <slf4j.version>1.6.6</slf4j.version>
-        <log4j.version>1.2.12</log4j.version>
-        <mysql.version>5.1.6</mysql.version>
-        <mybatis.version>3.4.5</mybatis.version>
+        <slf4j.version>1.7.30</slf4j.version>
+        <log4j.version>2.13.3</log4j.version>
+
+        <hutool.version>5.7.7</hutool.version>
+
     </properties>
     <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+        <!--spring整合单元测试-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <!--spring核心包-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
 
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
-            <version>5.7.7</version>
+            <version>${hutool.version}</version>
         </dependency>
 
         <!-- log start -->
@@ -43,7 +67,7 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>1.7.30</version>
+            <version>${slf4j.version}</version>
         </dependency>
 
         <!-- bridge -->
@@ -51,19 +75,19 @@
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-slf4j-impl</artifactId>
-            <version>2.13.3</version>
+            <version>${log4j.version}</version>
         </dependency>
 
         <!-- log4j2 -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
-            <version>2.13.3</version>
+            <version>${log4j.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>
-            <version>2.13.3</version>
+            <version>${log4j.version}</version>
         </dependency>
     </dependencies>
 

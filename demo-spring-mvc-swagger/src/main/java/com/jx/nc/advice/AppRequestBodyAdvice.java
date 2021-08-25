@@ -1,29 +1,55 @@
 package com.jx.nc.advice;
 
+import cn.hutool.core.exceptions.StatefulException;
 import cn.hutool.core.io.IoUtil;
-import cn.hutool.crypto.SecureUtil;
-import cn.hutool.crypto.asymmetric.Sign;
+import cn.hutool.crypto.KeyUtil;
 import cn.hutool.crypto.asymmetric.SignAlgorithm;
+import cn.hutool.json.JSONUtil;
 import cn.hutool.jwt.JWT;
+import cn.hutool.jwt.signers.JWTSigner;
+import cn.hutool.jwt.signers.JWTSignerUtil;
+import com.jx.nc.Contants;
 import com.jx.nc.advice.annotation.SecretAnnotation;
+import com.jx.nc.busexcep.CustomBusException;
+import com.jx.nc.redis.StandaloneRedisService;
+import com.sun.org.apache.xerces.internal.impl.dv.util.Base64;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpInputMessage;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.method.annotation.RequestBodyAdvice;
 
+import javax.annotation.Resource;
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-@ControllerAdvice(basePackages = "com.jx.nc.controller")
+@ControllerAdvice(basePackages = {"com.jx.nc.controller", "com.jx.nc.system.controller"})
 public class AppRequestBodyAdvice implements RequestBodyAdvice {
+
+    private static final Logger logger = LoggerFactory.getLogger(AppRequestBodyAdvice.class);
+
+    @Resource
+    private StandaloneRedisService standaloneRedisService;
+
+    @ExceptionHandler(StatefulException.class)
+    @ResponseBody
+    public String StatefulException(StatefulException se) {
+        return se.getMessage();
+    }
+
     @Override
     public boolean supports(MethodParameter methodParameter, Type type, Class<? extends HttpMessageConverter<?>> aClass) {
         //判断方法是否存在解密注解，存在则拦截，不存在则不处理
-        return methodParameter.getMethodAnnotation(SecretAnnotation.class) != null ;
+        return methodParameter.getMethodAnnotation(SecretAnnotation.class) != null;
 //        return methodParameter.hasParameterAnnotation(RequestBody.class);
     }
 
@@ -36,14 +62,13 @@ public class AppRequestBodyAdvice implements RequestBodyAdvice {
                     @Override
                     public InputStream getBody() throws IOException {
                         List<String> tokenList = httpInputMessage.getHeaders().get("token");
-                        if (tokenList.isEmpty()) {
-                            throw new RuntimeException("请求头缺少appID");
+                        if (tokenList == null || tokenList.isEmpty()) {
+                            throw new RuntimeException("请求头缺少token");
                         }
                         String token = tokenList.get(0);
                         String bodyStr = IoUtil.read(httpInputMessage.getBody(), "utf-8");
 
                         bodyStr = decode(bodyStr, token);
-
 
                         return IoUtil.toStream(bodyStr, "utf-8");
                     }
@@ -75,24 +100,33 @@ public class AppRequestBodyAdvice implements RequestBodyAdvice {
      * @param token
      * @return
      */
-    private String decode(String bodyStr, String token) {
-        String rightToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9." +
-                "eyJzdWIiOiIxMjM0NTY3ODkwIiwiYWRtaW4iOnRydWUsIm5hbWUiOiJsb29seSJ9." +
-                "536690902d931d857d2f47d337ec81048ee09a8e71866bcc8404edbbcbf4cc40";
+    private String decode(String bodyStr, String token) throws CustomBusException {
 
-// 密钥
-        byte[] key = "1234567890".getBytes();
+        Map map = JSONUtil.toBean(bodyStr, HashMap.class);
 
-// 默认验证HS265的算法
-        boolean verify = JWT.of(rightToken).setKey(key).verify();
+        logger.info("提交的内容：" + bodyStr);
+        // 密钥
+        JWT jwt = JWT.of(token);
+        // 默认验证HS265的算法
+//        JWTSigner signer = JWTSignerUtil.createSigner(SignAlgorithm.SHA256withRSA.getValue(),
+//                // 随机生成密钥对，此处用户可自行读取`KeyPair`、公钥或私钥生成`JWTSigner`
+//                Contants.keyPair.getPublic());
+        JWTSigner signer = JWTSignerUtil.createSigner(SignAlgorithm.MD5withRSA.getValue(),
+                // 随机生成密钥对，此处用户可自行读取`KeyPair`、公钥或私钥生成`JWTSigner`
+                KeyUtil.generatePublicKey(SignAlgorithm.SHA256withRSA.getValue(), Base64.decode(Contants.publicKey)));
 
-//        byte[] data = "我是一段测试字符串".getBytes();
-//        Sign sign = SecureUtil.sign(SignAlgorithm.MD5withRSA);
-//        //签名
-//        byte[] signed = sign.sign(data);
-//        //验证签名
-//        boolean verify = sign.verify(data, signed);
-
-        return bodyStr;
+        boolean verify = jwt.setSigner(signer).verify();
+//        boolean verify = JWT.of(token).setKey(StrUtil.bytes(Contants.secretKey)).verify();
+        if (standaloneRedisService.containsKey(token) && standaloneRedisService.getValue(token) != null) {
+            if (verify) {
+                logger.info("Payloads的信息：" + JSONUtil.toJsonStr(jwt.getPayloads()));
+                standaloneRedisService.cacheValue(token, "jwttoken", 5 * 60 * 1000);
+                return "";
+            } else {
+                throw new CustomBusException("token验证无效");
+            }
+        } else {
+            throw new CustomBusException("token已过期");
+        }
     }
 }

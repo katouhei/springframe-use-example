@@ -29,10 +29,6 @@
         <property name="basePackage" value="com.jx.nc.*.mapper"/>
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
     </bean>
-
-    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
-        <property name="dataSource" ref="dynamicDataSource" />
-    </bean>
     <!--开启组件包扫描-->
     <context:component-scan base-package="com.jx.nc.system"/>
 

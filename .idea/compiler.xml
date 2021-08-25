@@ -8,8 +8,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="demo-spring-data" />
         <module name="demo-spring-mybatisplus" />
-        <module name="demo-spring-mvc-swagger" />
         <module name="demo-spring-mybatis" />
+        <module name="demo-spring-mvc-swagger" />
         <module name="demo-spring-mvc" />
         <module name="demo-spring-mvc-knife4j" />
       </profile>

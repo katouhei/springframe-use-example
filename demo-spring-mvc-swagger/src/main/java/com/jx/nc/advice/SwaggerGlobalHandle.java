@@ -28,7 +28,7 @@ public class SwaggerGlobalHandle {
     @ResponseBody
     public String customBusException(CustomBusException e) {
         Map resultMap = new HashMap<>();
-        resultMap.put("msg", DateUtil.formatDateTime(new Date()) + "业务异常" + e.getMessage());
+        resultMap.put("msg", DateUtil.formatDateTime(new Date()) + "业务异常：" + e.getMessage());
         logger.info("CustomBusException捕获异常:" + e.getMessage());
         return JSONUtil.toJsonStr(resultMap);
     }
@@ -37,7 +37,7 @@ public class SwaggerGlobalHandle {
     @ResponseBody
     public String customException(Exception e) {
         Map resultMap = new HashMap<>();
-        resultMap.put("msg", DateUtil.formatDateTime(new Date()) + "增强Controller捕获异常");
+        resultMap.put("msg", DateUtil.formatDateTime(new Date()) + "增强Controller捕获异常:"+e.getMessage() );
         logger.info("增强Controller捕获异常:" + e.getMessage());
         return JSONUtil.toJsonStr(resultMap);
     }

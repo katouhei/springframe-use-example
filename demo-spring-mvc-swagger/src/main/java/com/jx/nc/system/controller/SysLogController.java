@@ -67,11 +67,11 @@ public class SysLogController {
 
     @RequestMapping("/syslog/query")
     @ResponseBody
-    public String query() throws Exception {
+    public List<SysLog> query() throws Exception {
         List<SysLog> list = sysLogService.select(new HashMap());
         String result = JSONUtil.toJsonStr(list);
         logger.info("查询结果：" + result);
-        return result;
+        return list;
 
     }
 
@@ -87,6 +87,13 @@ public class SysLogController {
         String result = JSONUtil.toJsonStr(list);
         logger.info("查询结果：" + result);
         return result;
+
+    }
+
+    @RequestMapping("/syslog/queryBlank")
+    @ResponseBody
+    public String queryBlank() throws Exception {
+        return "";
 
     }
 
