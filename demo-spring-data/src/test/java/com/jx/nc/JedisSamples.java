@@ -21,11 +21,19 @@ public class JedisSamples {
     @Test
     public void Set() {
         jedis.set("hello", "spring");
+        jedis.expire("hello", 300l);
+        jedis.set("testhello", "testhellospring");
+        jedis.expire("testhello", 3300l);
+        jedis.set("abc", "1111111111111111aaaaaaaaaaaaaaa2222222222222");
     }
 
     @Test
     public void Get() {
         String s = jedis.get("hello");
+        System.out.println(s);
+        s = jedis.get("testhello");
+        System.out.println(s);
+        s = jedis.get("abc");
         System.out.println(s);
     }
 

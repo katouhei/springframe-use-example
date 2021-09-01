@@ -1,8 +1,17 @@
 package com.jx.nc;
 
+import cn.hutool.core.convert.Convert;
+import cn.hutool.core.io.IoUtil;
+import cn.hutool.core.util.ObjectUtil;
+import cn.hutool.core.util.StrUtil;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import java.io.Serializable;
+import java.util.ArrayDeque;
+import java.util.Deque;
 
 
 @RunWith(SpringRunner.class)
@@ -35,4 +44,17 @@ public class DemoSysLog {
 //
 //        logger.info(JSONUtil.toJsonStr(list));
 //    }
+
+    @Test
+    public void test2() {
+        String value = "rO0ABXNyABxjb20uangubmMuc2hpcm8uU2hpcm9TZXNzaW9uW0X2itT2DYcCAAFMAAZzdGF0dXN0ABJMamF2YS9sYW5nL1N0cmluZzt4cgAqb3JnLmFwYWNoZS5zaGlyby5zZXNzaW9uLm1ndC5TaW1wbGVTZXNzaW9unRyhuNWMYm4DAAB4cHcCAFt0ACQ5ZGI0ZWVmOC05Y2RiLTRjYTItOGU5MS1iNDY4M2IzYjBkMGJzcgAOamF2YS51dGlsLkRhdGVoaoEBS1l0GQMAAHhwdwgAAAF7oL7cl3hxAH4ABncTAAAAAAAbd0AACTEyNy4wLjAuMXhw";
+        Deque<Serializable> deque = new ArrayDeque<Serializable>();
+        deque.add("abc");
+        System.out.println(StrUtil.toString(value));
+        String s = StrUtil.toString(deque);
+        Deque<Serializable> d = (Deque<Serializable>)Convert.convert(Object.class, s);
+        System.out.println(d.size());
+
+
+    }
 }

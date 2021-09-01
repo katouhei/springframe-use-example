@@ -12,7 +12,7 @@ public class ShiroSessionListener implements SessionListener {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Resource
-    private ShiroSessionDao shiroSessionDao;
+    private ShiroSessionCacheDao shiroSessionDao;
 
     @Override
     public void onStart(Session session) {

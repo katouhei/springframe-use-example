@@ -58,6 +58,7 @@ public class RedisCache<K, V> implements Cache<K, V> {
         this.matchKey = matchKey;
         clear();
     }
+
     @Override
     public void clear() throws CacheException {
         logger.debug("清除redis所有缓存对象");
@@ -71,6 +72,7 @@ public class RedisCache<K, V> implements Cache<K, V> {
         this.matchKey = matchKey;
         return size();
     }
+
     @Override
     public int size() {
         if(matchKey != null) {
@@ -85,6 +87,7 @@ public class RedisCache<K, V> implements Cache<K, V> {
         this.matchKey = matchKey;
         return keys();
     }
+
     @Override
     public Set<K> keys() {
         if(matchKey != null) {
@@ -102,6 +105,7 @@ public class RedisCache<K, V> implements Cache<K, V> {
         this.matchKey = matchKey;
         return values();
     }
+
     @Override
     public Collection<V> values() {
         if(matchKey != null) {

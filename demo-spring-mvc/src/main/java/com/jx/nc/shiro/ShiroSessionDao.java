@@ -1,17 +1,51 @@
 package com.jx.nc.shiro;
 
 import org.apache.shiro.session.Session;
+import org.apache.shiro.session.UnknownSessionException;
+import org.apache.shiro.session.mgt.eis.AbstractSessionDAO;
 
 import java.io.Serializable;
 import java.util.Collection;
 
-public interface ShiroSessionDao {
+public class ShiroSessionDao extends AbstractSessionDAO {
 
-    void saveSession(Session session);
+    private ShiroSessionCacheDao shiroSessionCacheDao;
 
-    void deleteSession(Serializable sessionId);
+    @Override
+    protected Serializable doCreate(Session session) {
+        Serializable sessionId = this.generateSessionId(session);
+        this.assignSessionId(session, sessionId);
+        shiroSessionCacheDao.saveSession(session);
+        return sessionId;
+    }
 
-    Session getSession(Serializable sessionId);
+    @Override
+    protected Session doReadSession(Serializable serializable) {
+        return shiroSessionCacheDao.getSession(serializable);
+    }
 
-    Collection<Session> getAllSessions();
+    @Override
+    public void update(Session session) throws UnknownSessionException {
+        shiroSessionCacheDao.saveSession(session);
+    }
+
+    @Override
+    public void delete(Session session) {
+        if (session == null) {
+            return;
+        }
+        Serializable id = session.getId();
+        if (id != null) {
+            shiroSessionCacheDao.deleteSession(id);
+        }
+    }
+
+    @Override
+    public Collection<Session> getActiveSessions() {
+        return shiroSessionCacheDao.getAllSessions();
+    }
+
+    public void setShiroSessionCacheDao(ShiroSessionCacheDao shiroSessionCacheDao) {
+        this.shiroSessionCacheDao = shiroSessionCacheDao;
+    }
 }
